@@ -48,7 +48,7 @@
 	
 	<rotatable>false</rotatable>
     <graphicData>
-      <texPath>Things/Item/Resource/IV_Coagulant</texPath>
+      <texPath>Things/Item/Drugs/IV_Coagulant</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     
@@ -95,7 +95,7 @@
 	
 	<rotatable>false</rotatable>
     <graphicData>
-      <texPath>Things/Item/Resource/IV_Coagulant</texPath>
+      <texPath>Things/Item/Drugs/IV_Coagulant</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     

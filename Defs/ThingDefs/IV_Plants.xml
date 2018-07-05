@@ -9,8 +9,8 @@
 			<MaxHitPoints>85</MaxHitPoints>
 		</statBases>
 		<graphicData>
-			<texPath>Things/Plant/RicePlant</texPath>
-			<graphicClass>Graphic_Random</graphicClass>
+			<texPath>Things/Plants/bloodstem-plant-mature</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<selectable>true</selectable>
 		<pathCost>10</pathCost>
@@ -31,6 +31,7 @@
 				<li>Hydroponic</li>
 			</sowTags>
 			<topWindExposure>0.1</topWindExposure>
+			<immatureGraphicPath>Things/Plants/bloodstem-plant-immature</immatureGraphicPath>
 			<growDays>3</growDays>
 			<visualSizeRange>
 				<min>0.3</min>
