@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_Vent</defName>
+		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+		<label>Mechanical Ventilator</label>
+		
+		<!-- Give player 1 minute before Pawn dies of oxygen deprivation -->
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>3600</min>
+			  <max>3600</max>
+			</disappearsAfterTicks>
+		  </li>
+		</comps>
+		
+		<stages>
+		  <li>
+			<label>Life Support</label>
+			<painOffset>0.5</painOffset>
+			<capMods>
+			  <li>
+				<capacity>Breathing</capacity>
+				<offset>0.5</offset>
+			  </li>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.1</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_Filter</defName>
+		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+		<label>Dialysis Machine</label>
+		
+		<!-- Humans will see severe illness in a day without proper kidney function (20,000 ticks in Rimworld = one IG day) -->
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>20000</min>
+			  <max>20000</max>
+			</disappearsAfterTicks>
+		  </li>
+		</comps>
+		
+		<stages>
+		  <li>
+			<label>Life Support</label>
+			<painOffset>0.1</painOffset>
+			<capMods>
+			  <li>
+				<capacity>BloodFiltration</capacity>
+				<offset>0.5</offset>
+			  </li>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.1</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_Bypass</defName>
+		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+		<label>Heart/Lung Bypass</label>
+		
+		<!-- Give player 30 seconds before Pawn dies of oxygen deprivation / no heartbeat -->
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>1800</min>
+			  <max>1800</max>
+			</disappearsAfterTicks>
+		  </li>
+		</comps>
+		
+		<stages>
+		  <li>
+			<label>Life Support</label>
+			<painOffset>0.1</painOffset>
+			<capMods>
+			  <li>
+				<capacity>BloodPumping</capacity>
+				<offset>0.5</offset>
+			  </li>
+			  <li>
+				<capacity>Breathing</capacity>
+				<offset>0.5</offset>
+			  </li>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.1</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+
+</Defs>
