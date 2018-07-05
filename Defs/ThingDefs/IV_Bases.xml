@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef Name="IV_InjectBase" Abstract="True">
+    <thingClass>ThingWithComps</thingClass>
+    <category>Item</category>
+    <useHitPoints>true</useHitPoints>
+    <selectable>true</selectable>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>6</DeteriorationRate>
+    </statBases>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>100</stackLimit>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <thingCategories>
+      <li>Drugs</li>
+    </thingCategories>
+    <alwaysHaulable>true</alwaysHaulable>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
+    <pathCost>15</pathCost>
+    <resourceReadoutPriority>Last</resourceReadoutPriority>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <ingestible>
+	  <foodType>Processed</foodType>
+      <preferability>NeverForNutrition</preferability>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <joyKind>Chemical</joyKind>
+      <chairSearchRadius>8</chairSearchRadius>
+    </ingestible>
+    <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>
+  </ThingDef>
+
+</Defs>

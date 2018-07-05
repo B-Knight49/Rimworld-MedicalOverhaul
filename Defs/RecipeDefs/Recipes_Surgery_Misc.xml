@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<RecipeDef>
+		<defName>AdministerBloodInjection</defName>
+		<label>Inject Coagulant</label>
+		<description>Injects the Pawn with coagulant.</description>
+		<workerClass>Recipe_AdministerUsableItem</workerClass>
+		<jobString>Injecting coagulant...</jobString>
+		<targetsBodyPart>false</targetsBodyPart>
+		<anesthetize>false</anesthetize>
+		<workAmount>50</workAmount>
+		<dontShowIfAnyIngredientMissing>false</dontShowIfAnyIngredientMissing>
+		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+		<requireBed>false</requireBed>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>SerumOne</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>SerumOne</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+  	
+</Defs>

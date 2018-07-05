@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="PlantBase">
+		<defName>IV_BloodStemPlant</defName>
+		<label>Bloodstem Plant</label>
+		<description>An exotic red leaf with coagulating properties.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plant/RicePlant</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+		</graphicData>
+		<selectable>true</selectable>
+		<pathCost>10</pathCost>
+		<ingestible>
+			<foodType>Plant</foodType>
+			<preferability>NeverForNutrition</preferability>
+		</ingestible>
+		<plant>
+			<fertilitySensitivity>1.0</fertilitySensitivity>
+			<dieIfLeafless>true</dieIfLeafless>
+			<reproduces>false</reproduces>
+			<maxMeshCount>4</maxMeshCount>
+			<harvestTag>Standard</harvestTag>
+			<harvestedThingDef>Bloodstem</harvestedThingDef>
+			<harvestYield>4</harvestYield>
+			<sowTags>
+				<li>Ground</li>
+				<li>Hydroponic</li>
+			</sowTags>
+			<topWindExposure>0.1</topWindExposure>
+			<growDays>3</growDays>
+			<visualSizeRange>
+				<min>0.3</min>
+				<max>0.8</max>
+			</visualSizeRange>
+		</plant>
+	</ThingDef>
+	
+</Defs>

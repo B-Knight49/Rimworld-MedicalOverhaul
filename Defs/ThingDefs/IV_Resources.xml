@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>Bloodstem</defName>
+    <label>Bloodstem Leaf</label>
+    <description>An exotic red leaf with coagulating properties.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Cloth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(255,0,0)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>1.5</MarketValue>
+      <Mass>0.026</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+  </ThingDef>
+  
+  <ThingDef ParentName="ResourceBase">
+    <defName>CrushedStem</defName>
+    <label>Crushed Bloodstem</label>
+    <description>Well crushed bloodstem leafs. Looks gooey and red.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Cloth</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <color>(200,0,0)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <MarketValue>1.5</MarketValue>
+      <Mass>0.026</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+	<recipeMaker>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <Bloodstem>4</Bloodstem>
+    </costList>
+    <thingCategories>
+      <li>PlantMatter</li>
+    </thingCategories>
+  </ThingDef>
+  
+</Defs>
