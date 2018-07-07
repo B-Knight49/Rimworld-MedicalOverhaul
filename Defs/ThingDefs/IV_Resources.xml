@@ -7,8 +7,8 @@
     <label>Bloodstem Leaf</label>
     <description>An exotic red leaf with coagulating properties.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/Bloodstem</texPath>
-      <graphicClass>Graphic_StackCount</graphicClass>
+      <texPath>Things/Item/Resource/bloodstem</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
       <MaxHitPoints>80</MaxHitPoints>
