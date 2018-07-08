@@ -49,6 +49,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bypass.cs" />
+    <Compile Include="Filter.cs" />
     <Compile Include="Ventillator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

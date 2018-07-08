@@ -14,13 +14,12 @@ using System.Reflection;
 
 namespace IV
 {
-    public class Building_Ventil : Building
+    public class Building_Filter : Building
     {
-        public static HediffDef IV_Vent = HediffDef.Named("IV_Vent");
-        public static HediffDef DR_Oxygen = HediffDef.Named("ClinicalDeathAsphyxiation");
+        public static HediffDef IV_Filter = HediffDef.Named("IV_Filter");
         private CompPowerTrader powerComp = null;
 
-        public Building_Ventil()
+        public Building_Filter()
             : base()
         {
             Log.Message("[Medical Overhaul] Building Initialised");
@@ -52,7 +51,7 @@ namespace IV
         {
             var adjacent = GenAdj.CardinalDirectionsAround;
             var position = this.Position;
-            for (int i = 0; i <adjacent.Length; i++)
+            for (int i = 0; i < adjacent.Length; i++)
             {
                 var things = this.Map.thingGrid.ThingsListAt(adjacent[i] + position);
                 foreach (Thing thing in things)
@@ -73,15 +72,19 @@ namespace IV
         {
             if (BreathingStat <= 0f)
             {
-                pawn.health.AddHediff(IV_Vent);
+                pawn.health.AddHediff(IV_Filter);
 
-                // Stop the "Oxygen Deprivation" hediff from increasing
+                // Stop the "Acute Liver Failure" or "Acute Kidney Failure" hediff from increasing
                 List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
 
                 foreach (Hediff hediff in Hediffs)
                 {
                     var StrHediff = hediff.ToString();
-                    if (StrHediff.Contains("ClinicalDeathAsphyxiation"))
+                    if (StrHediff.Contains("KidneyFailure"))
+                    {
+                        pawn.health.RemoveHediff(hediff);
+                    }
+                    if (StrHediff.Contains("LiverFailure"))
                     {
                         pawn.health.RemoveHediff(hediff);
                     }
@@ -91,7 +94,7 @@ namespace IV
             else
             {
                 return;
-            }   
+            }
         }
     }
 }
