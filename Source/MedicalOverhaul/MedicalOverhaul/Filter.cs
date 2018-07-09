@@ -59,18 +59,18 @@ namespace IV
                     if (thing is Pawn)
                     {
                         Pawn pawn = thing as Pawn;
-                        var BreathingStat = pawn.health.capacities.GetLevel(PawnCapacityDefOf.Breathing);
+                        var BloodFiltrationStat = pawn.health.capacities.GetLevel(PawnCapacityDefOf.BloodFiltration);
 
-                        ApplyHediff(BreathingStat, pawn);
+                        ApplyHediff(BloodFiltrationStat, pawn);
                     }
                 }
             }
         }
 
         // Check the pawn(s) health stats and then, if applicable, apply the hediff
-        public void ApplyHediff(float BreathingStat, Pawn pawn)
+        public void ApplyHediff(float BloodFiltrationStat, Pawn pawn)
         {
-            if (BreathingStat <= 0f)
+            if (BloodFiltrationStat <= 0f)
             {
                 pawn.health.AddHediff(IV_Filter);
 
@@ -79,6 +79,7 @@ namespace IV
 
                 foreach (Hediff hediff in Hediffs)
                 {
+
                     var StrHediff = hediff.ToString();
                     if (StrHediff.Contains("KidneyFailure"))
                     {

@@ -59,18 +59,19 @@ namespace IV
                     if (thing is Pawn)
                     {
                         Pawn pawn = thing as Pawn;
+                        var BloodPumpingStat = pawn.health.capacities.GetLevel(PawnCapacityDefOf.BloodPumping);
                         var BreathingStat = pawn.health.capacities.GetLevel(PawnCapacityDefOf.Breathing);
 
-                        ApplyHediff(BreathingStat, pawn);
+                        ApplyHediff(BloodPumpingStat, BreathingStat, pawn);
                     }
                 }
             }
         }
 
         // Check the pawn(s) health stats and then, if applicable, apply the hediff
-        public void ApplyHediff(float BreathingStat, Pawn pawn)
+        public void ApplyHediff(float BloodPumpingStat, float BreathingStat, Pawn pawn)
         {
-            if (BreathingStat <= 0f)
+            if (BloodPumpingStat <= 0f || BreathingStat <= 0f)
             {
                 pawn.health.AddHediff(IV_Bypass);
 
@@ -79,6 +80,7 @@ namespace IV
 
                 foreach (Hediff hediff in Hediffs)
                 {
+
                     var StrHediff = hediff.ToString();
                     if (StrHediff.Contains("ClinicalDeathNoHeartbeat"))
                     {
