@@ -7,7 +7,7 @@
     <label>Bloodstem Leaf</label>
     <description>An exotic red leaf with coagulating properties.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/bloodstem</texPath>
+      <texPath>Things/Item/Resource/IV_Bloodstem</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
@@ -27,7 +27,7 @@
     <label>Crushed Bloodstem</label>
     <description>Well crushed bloodstem leafs. Looks gooey and red.</description>
     <graphicData>
-      <texPath>Things/Item/Resource/bloodstem-powder</texPath>
+      <texPath>Things/Item/Resource/IV_BloodstemPowder</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     <statBases>
