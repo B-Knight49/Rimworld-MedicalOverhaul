@@ -43,6 +43,7 @@
       <Mass>0.026</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>4</DeteriorationRate>
+      <WorkToMake>5000</WorkToMake>
     </statBases>
     <thingCategories>
       <li>PlantMatter</li>
