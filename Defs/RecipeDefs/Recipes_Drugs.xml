@@ -3,14 +3,14 @@
 <Defs>
 
 	<RecipeDef>
-		<defName>MakeCrushedStem</defName>
+		<defName>MakeCrushedStem2</defName>
 		<label>make 2x Crushed Bloodstem</label>
 		<description>A thick, gooey, red substance made by crushing bloodstem leaves. Used to create medical coagulants.</description>
 		
 		<jobString>Making Crushed Bloodstem.</jobString>
-		<workSpeedStat>DrugProductionSpeed</workSpeedStat>
-		<workSkill>Crafting</workSkill>
-		<workAmount>3000</workAmount>
+		<workSpeedStat></workSpeedStat>
+		<workSkill></workSkill>
+		<workAmount>4</workAmount>
 		<soundWorking>Recipe_CookMeal</soundWorking>          
 		
 		<allowMixingIngredients>true</allowMixingIngredients>
@@ -38,14 +38,14 @@
 	</RecipeDef>
 	
 	<RecipeDef>
-		<defName>MakeCrushedStem</defName>
+		<defName>MakeCrushedStem1</defName>
 		<label>make Crushed Bloodstem</label>
 		<description>A thick, gooey, red substance made by crushing bloodstem leaves. Used to create medical coagulants.</description>
 		
 		<jobString>Making Crushed Bloodstem.</jobString>
-		<workSpeedStat>DrugProductionSpeed</workSpeedStat>
-		<workSkill>Crafting</workSkill>
-		<workAmount>5000</workAmount>
+		<workSpeedStat></workSpeedStat>
+		<workSkill></workSkill>
+		<workAmount>8</workAmount>
 		<soundWorking>Recipe_CookMeal</soundWorking>          
 		
 		<allowMixingIngredients>true</allowMixingIngredients>
