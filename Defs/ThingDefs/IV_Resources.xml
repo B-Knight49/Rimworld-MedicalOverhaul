@@ -20,6 +20,12 @@
     <thingCategories>
       <li>PlantMatter</li>
     </thingCategories>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
   </ThingDef>
   
   <ThingDef ParentName="ResourceBase">
