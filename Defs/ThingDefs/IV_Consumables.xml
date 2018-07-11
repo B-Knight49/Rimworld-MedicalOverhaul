@@ -13,8 +13,8 @@
 		</graphicData>
 		<soundInteract>Standard_Drop</soundInteract>
 		<soundDrop>Standard_Drop</soundDrop>
-			<techLevel>Industrial</techLevel>
-			<statBases>
+    <techLevel>Industrial</techLevel>
+    <statBases>
 		  <MaxHitPoints>60</MaxHitPoints>
 		  <MarketValue>5</MarketValue>
 		  <Mass>0.5</Mass>
@@ -32,7 +32,7 @@
 		<recipeMaker>
 		  <workSpeedStat>DrugProductionSpeed</workSpeedStat>
 		  <recipeUsers>
-			<li>CraftingSpot</li>
+			  <li>CraftingSpot</li>
 		  </recipeUsers>
 		  <skillRequirements>
 				<Intellectual>1</Intellectual>
@@ -44,21 +44,18 @@
     <defName>SerumOne</defName>
     <label>Injectable Coagulant</label>
     <description>An injectable, single use syringe which coagulates the blood (creates blood clots) to slow bleeding temporarily. Only administer once - can be easily overdosed on!</description>
-    <thingClass>Medicine</thingClass>
-	
-	<rotatable>false</rotatable>
+    <thingClass>Medicine</thingClass>	
+	  <rotatable>false</rotatable>
     <graphicData>
       <texPath>Things/Item/Drugs/IV_CoagulantSerum1</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    
     <statBases>
       <WorkToMake>7500</WorkToMake>
       <MarketValue>100</MarketValue>
       <Mass>0.005</Mass>
     </statBases>
     <techLevel>Spacer</techLevel>
-	
     <ingestible>
       <drugCategory>Medical</drugCategory>
       <outcomeDoers>
@@ -75,10 +72,10 @@
       </recipeUsers>
     </recipeMaker>
     <costList>
-	  <CrushedStem>4</CrushedStem>
+      <CrushedStem>4</CrushedStem>
       <Neutroamine>2</Neutroamine>
-	  <Steel>1</Steel>
-	  <Component>2</Component>
+      <Steel>1</Steel>
+      <Component>2</Component>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
@@ -92,19 +89,16 @@
     <label>Glitterworld Blood Thickener</label>
     <description>An injectable, single use syringe which thickens the blood to slow bleeding. Lasts forever although is less potent than {Serum1}.</description>
     <thingClass>Medicine</thingClass>
-	
-	<rotatable>false</rotatable>
+	  <rotatable>false</rotatable>
     <graphicData>
       <texPath>Things/Item/Drugs/IV_CoagulantSerum2</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    
     <statBases>
       <MarketValue>8000</MarketValue>
       <Mass>0.005</Mass>
     </statBases>
     <techLevel>Spacer</techLevel>
-	
     <ingestible>
       <drugCategory>Medical</drugCategory>
       <outcomeDoers>
@@ -114,7 +108,6 @@
         </li>
       </outcomeDoers>
     </ingestible>
- 
     <comps>
       <li Class="CompProperties_Drug">
         <listOrder>1000</listOrder>

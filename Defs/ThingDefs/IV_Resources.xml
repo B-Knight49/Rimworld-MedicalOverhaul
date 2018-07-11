@@ -42,19 +42,8 @@
       <Mass>0.026</Mass>
       <Flammability>1.0</Flammability>
       <DeteriorationRate>4</DeteriorationRate>
+      <WorkToMake>5000</WorkToMake>
     </statBases>
-	<recipeMaker>
-	  <workSpeedStat>DrugProductionSpeed</workSpeedStat>
-      <recipeUsers>
-        <li>DrugLab</li>
-      </recipeUsers>
-	  <skillRequirements>
-		<Intellectual>1</Intellectual>
-      </skillRequirements>
-    </recipeMaker>
-    <costList>
-      <Bloodstem>4</Bloodstem>
-    </costList>
     <thingCategories>
       <li>PlantMatter</li>
     </thingCategories>
