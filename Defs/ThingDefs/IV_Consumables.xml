@@ -35,7 +35,7 @@
 			<li>CraftingSpot</li>
 		  </recipeUsers>
 		  <skillRequirements>
-				<Crafting>1</Crafting>
+				<Intellectual>1</Intellectual>
 		  </skillRequirements>
 		</recipeMaker>
   </ThingDef>

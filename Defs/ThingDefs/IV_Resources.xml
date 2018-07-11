@@ -44,9 +44,13 @@
       <DeteriorationRate>4</DeteriorationRate>
     </statBases>
 	<recipeMaker>
+	  <workSpeedStat>DrugProductionSpeed</workSpeedStat>
       <recipeUsers>
         <li>DrugLab</li>
       </recipeUsers>
+	  <skillRequirements>
+		<Intellectual>1</Intellectual>
+      </skillRequirements>
     </recipeMaker>
     <costList>
       <Bloodstem>4</Bloodstem>
