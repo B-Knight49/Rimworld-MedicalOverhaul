@@ -1,9 +1,31 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
-	<RecipeDef Name="MakeCrushedStemBase" Abstract="True">
+
+	<RecipeDef>
+		<defName>MakeCrushedStem2</defName>
+		<label>make 2x Crushed Bloodstem</label>
 		<description>A thick, gooey, red substance made by crushing bloodstem leaves. Used to create medical coagulants.</description>
 		<jobString>Making Crushed Bloodstem.</jobString>
+		<workSpeedStat></workSpeedStat>
+		<workSkill></workSkill>
+		<workAmount>4</workAmount>
+		<soundWorking>Recipe_CookMeal</soundWorking>          
+		
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<recipeUsers>
+			 <li>DrugLab</li>
+		  </recipeUsers>
+		<ingredients>
+		<li>
+			<filter>
+			  <thingDefs>
+				<li>Bloodstem</li>
+			  </thingDefs>
+			</filter>
+			<count>4</count>
+		  </li>
+		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li>Bloodstem</li>
@@ -39,10 +61,16 @@
 		</products>
 	</RecipeDef>
 	
-	<RecipeDef ParentName="MakeCrushedStemBase">
-		<defName>MakeCrushedStem</defName>
+	<RecipeDef>
+		<defName>MakeCrushedStem1</defName>
 		<label>make Crushed Bloodstem</label>
-		<workAmount>5000</workAmount>
+		<description>A thick, gooey, red substance made by crushing bloodstem leaves. Used to create medical coagulants.</description>
+		<jobString>Making Crushed Bloodstem.</jobString>
+		<workSpeedStat></workSpeedStat>
+		<workSkill></workSkill>
+		<workAmount>8</workAmount>
+		<soundWorking>Recipe_CookMeal</soundWorking>          
+		<allowMixingIngredients>true</allowMixingIngredients>
 		<recipeUsers>
 			 <li>CraftingSpot</li>
 		</recipeUsers>

@@ -6,6 +6,7 @@
     <defName>Bloodstem</defName>
     <label>Bloodstem Leaf</label>
     <description>An exotic red leaf with coagulating properties.</description>
+	<tickerType>Rare</tickerType>
     <graphicData>
       <texPath>Things/Item/Resource/IV_Bloodstem</texPath>
       <graphicClass>Graphic_Single</graphicClass>

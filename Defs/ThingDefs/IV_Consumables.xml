@@ -30,12 +30,13 @@
 		  <Bloodstem>4</Bloodstem>
 		</costList>
 		<recipeMaker>
-		  <workSpeedStat>DrugProductionSpeed</workSpeedStat>
+		  <workSpeedStat></workSpeedStat>
+		  <workSkill></workSkill>
 		  <recipeUsers>
 			  <li>CraftingSpot</li>
 		  </recipeUsers>
 		  <skillRequirements>
-				<Intellectual>1</Intellectual>
+			<Crafting>1</Crafting>
 		  </skillRequirements>
 		</recipeMaker>
   </ThingDef>
