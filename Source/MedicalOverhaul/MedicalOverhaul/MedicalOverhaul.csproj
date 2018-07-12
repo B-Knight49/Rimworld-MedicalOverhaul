@@ -50,7 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bypass.cs" />
+    <Compile Include="HediffComp_HediffChanger.cs" />
     <Compile Include="Filter.cs" />
+    <Compile Include="HediffCompProperties_HediffChanger.cs" />
     <Compile Include="Ventillator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

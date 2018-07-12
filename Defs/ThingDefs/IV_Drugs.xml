@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>Antidepressants</defName>
+		<label>Antidepressants</label>
+		<description>Antidepressants. Pills used to boost mood that usually come with side effects/withdrawal symptoms - however NOT addictive.</description>
+		<graphicData>
+		  <texPath>Things/Item/Drug/Penoxycyline</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+		  <WorkToMake>500</WorkToMake>
+		  <MarketValue>32</MarketValue>
+		  <Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>AntidepressantHediff</hediffDef>
+			  <severity>1.0</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+		  <recipeUsers>
+			<li>DrugLab</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<costList>
+		  <Neutroamine>2</Neutroamine>
+		</costList>
+		<comps>
+		  <li Class="CompProperties_Drug">
+			<listOrder>1000</listOrder>
+			<overdoseSeverityOffset>
+			  <min>0.25</min>
+			  <max>0.40</max>
+			</overdoseSeverityOffset>
+		  </li>
+		</comps>
+	</ThingDef>
+  
+    <ThingDef ParentName="MakeableDrugPillBase">
+		<defName>Antibiotics</defName>
+		<label>Antibiotics</label>
+		<description>Pills that speed up recovery from an infection / increase the rate at which a pawn becomes immune from an infection.</description>
+		<graphicData>
+		  <texPath>Things/Item/Drug/Penoxycyline</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+		  <WorkToMake>500</WorkToMake>
+		  <MarketValue>32</MarketValue>
+		  <Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>AntibioticsHediff</hediffDef>
+			  <severity>1.0</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+		  <recipeUsers>
+			<li>DrugLab</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<costList>
+		  <Neutroamine>2</Neutroamine>
+		</costList>
+		<comps>
+		  <li Class="CompProperties_Drug">
+			<listOrder>1000</listOrder>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>SuperAntibiotics</defName>
+		<label>Super Antibiotics</label>
+		<description>Extremely powerful superdrug that should only be used as a last resort to treat severe infections and illnesses. Can only be used once per pawn before it's no longer effective. Very expensive.</description>
+		<graphicData>
+		  <texPath>Things/Item/Drug/Penoxycyline</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>true</rotatable>
+		<statBases>
+		  <WorkToMake>500</WorkToMake>
+		  <MarketValue>32</MarketValue>
+		  <Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>SuperAnti</hediffDef>
+			  <severity>1.0</severity>
+			</li>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>SuperAntiHidden</hediffDef>
+			  <severity>1.0</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+		  <recipeUsers>
+			<li>DrugLab</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<costList>
+		  <Neutroamine>2</Neutroamine>
+		</costList>
+		<comps>
+		  <li Class="CompProperties_Drug">
+			<listOrder>1000</listOrder>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>Aspirin</defName>
+		<label>Aspirin</label>
+		<description>Anti-inflammatory drug that gradually helps with artery blockages and heart problems.</description>
+		<graphicData>
+		  <texPath>Things/Item/Drug/Penoxycyline</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+		  <WorkToMake>500</WorkToMake>
+		  <MarketValue>32</MarketValue>
+		  <Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>AspirinHediff</hediffDef>
+			  <severity>1.0</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+		  <recipeUsers>
+			<li>DrugLab</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<costList>
+		  <Neutroamine>2</Neutroamine>
+		</costList>
+		<comps>
+		  <li Class="CompProperties_Drug">
+			<listOrder>1000</listOrder>
+			<overdoseSeverityOffset>
+			  <min>0.10</min>
+			  <max>0.15</max>
+			</overdoseSeverityOffset>
+		  </li>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>PITablets</defName>
+		<label>Potassium Iodide</label>
+		<description>Small tablets that protect the thyroid gland against toxic fallout.</description>
+		<graphicData>
+		  <texPath>Things/Item/Drug/Penoxycyline</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+		  <WorkToMake>500</WorkToMake>
+		  <MarketValue>32</MarketValue>
+		  <Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>NoToxic</hediffDef>
+			  <severity>1.0</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+		  <recipeUsers>
+			<li>DrugLab</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<costList>
+		  <Neutroamine>2</Neutroamine>
+		</costList>
+		<comps>
+		  <li Class="CompProperties_Drug">
+			<listOrder>1000</listOrder>
+		  </li>
+		</comps>
+	</ThingDef>
+  
+</Defs>
