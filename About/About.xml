@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Serum's</name>
-	<author>Knight</author>
+	<name>Medical Overhaul</name>
+	<author>Knight / Kotobuki</author>
 	<targetVersion>0.18.0</targetVersion>
-	<description>Serums
-		</description>
+	<description>Medical Overhaul for Rimworld. Adds Intravenous Therapy, medications for chronic and local illnesses and life support machines such as mechanical ventilators.</description>
 </ModMetaData>

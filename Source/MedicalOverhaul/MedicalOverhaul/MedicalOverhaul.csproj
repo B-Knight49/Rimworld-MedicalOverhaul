@@ -53,6 +53,10 @@
     <Compile Include="HediffComp_HediffChanger.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="HediffCompProperties_HediffChanger.cs" />
+    <Compile Include="IV_Antibiotics.cs" />
+    <Compile Include="IV_Blood.cs" />
+    <Compile Include="IV_Food.cs" />
+    <Compile Include="IV_Painkiller.cs" />
     <Compile Include="Ventillator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
