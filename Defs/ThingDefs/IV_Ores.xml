@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="RockBase">
+    <defName>IV_SiliconeOre</defName>
+    <label>Compressed Silicone</label>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutComplex</shaderType>
+      <color>(50,50,50)</color>
+      <colorTwo>(0,0,0)</colorTwo>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+    </statBases>
+    <description>Oxygen, oil and pressure has come together on this distant Rimworld to create compressed silicone. Refine the ore to create Silicone polymers.</description>
+    <building>
+      <isResourceRock>true</isResourceRock>
+      <mineableThing>RawSilicone</mineableThing>
+      <mineableYield>25</mineableYield>
+      <mineableScatterCommonality>0.3</mineableScatterCommonality> 
+      <mineableScatterLumpSizeRange>
+        <min>10</min>
+        <max>15</max>
+      </mineableScatterLumpSizeRange>
+    </building>
+  </ThingDef>
+
+</Defs>

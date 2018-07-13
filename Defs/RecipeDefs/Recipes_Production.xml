@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+	<RecipeDef>
+		<defName>RefineSilicone</defName>
+		<label>Refine silicone</label>
+		<description>Make silicone polymers from compressed silicone ore.</description>
+		<jobString>Refining silicone</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>500</workAmount>
+		<workSkill>Intellectual</workSkill>
+		<recipeUsers>
+			 <li>Refinery</li>
+		 </recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>RawSilicone</li>
+					</thingDefs>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>RawSilicone</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<Silicone>15</Silicone>
+		</products>
+	</RecipeDef>
+	
+	<RecipeDef>
+    <defName>MakeSheets</defName>
+    <label>Make silicone sheets</label>
+    <description>Make silicone sheets.</description>
+    <jobString>Making silicone sheets.</jobString>
+    <workSpeedStat>SmithingSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>1000</workAmount>
+    <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
+	<recipeUsers>
+		<li>ComponentAssemblyBench</li>
+	</recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Silicone</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Silicone</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <SiliconeSheet>1</SiliconeSheet>
+    </products>
+		<skillRequirements>
+			<Crafting>5</Crafting>
+		</skillRequirements>
+    <workSkill>Crafting</workSkill>
+  </RecipeDef>
+	
+</Defs>

@@ -30,5 +30,136 @@
 			</thingDefs>
 		</fixedIngredientFilter>
 	</RecipeDef>
+	
+	<RecipeDef Name="SiliconeScars" ParentName="SurgeryFlesh" Abstract="True">
+      <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
+      <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+      <recipeUsers>
+         <li>Human</li>
+      </recipeUsers>
+      <workerClass>Recipe_RemoveHediff</workerClass>
+      <workAmount>500</workAmount>
+      <ingredients>
+         <li>
+           <filter>
+              <thingDefs>
+                 <li>SiliconeSheet</li>
+              </thingDefs>
+           </filter>
+           <count>3</count>
+         </li>
+      </ingredients>
+	  <appliedOnFixedBodyParts>
+		<li>Torso</li> 
+	  </appliedOnFixedBodyParts>
+      <fixedIngredientFilter>
+         <thingDefs>
+            <li>SiliconeSheet</li>
+         </thingDefs>
+      </fixedIngredientFilter>
+   </RecipeDef>
+   
+   <!-- INSPIRED BY EPOE's CODE -->
+   
+   <RecipeDef ParentName="SiliconeScars">
+      <defName>BurnScar</defName>
+      <label>Layer over burn</label>
+      <description>Layer silicone onto a burn.</description>
+      <jobString>Mending burn.</jobString>
+      <removesHediff>Burn</removesHediff>
+      <successfullyRemovedHediffMessage>Silicone has been layered onto {0}'s burn.</successfullyRemovedHediffMessage>
+   </RecipeDef>
+   
+     <RecipeDef ParentName="SiliconeScars">
+      <defName>ScratchScar</defName>
+      <label>Layer over surgical scratch</label>
+      <description>Layer silicone onto a surgical scratch.</description>
+      <jobString>Mending surgical scratch.</jobString>
+      <removesHediff>Scratch</removesHediff>
+      <successfullyRemovedHediffMessage>Silicone has been layered onto {0}'s scratch.</successfullyRemovedHediffMessage>
+   </RecipeDef>
+
+   <RecipeDef ParentName="SiliconeScars">
+      <defName>CrushScar</defName>
+      <label>Layer over crush</label>
+      <description>Layer silicone onto a crush.</description>
+      <jobString>Mending crush.</jobString>
+      <removesHediff>Crush</removesHediff>
+      <successfullyRemovedHediffMessage>Silicone has been layered onto {0}'s crush.</successfullyRemovedHediffMessage>
+   </RecipeDef>
+
+   
+   <RecipeDef ParentName="SiliconeScars">
+      <defName>CutScar</defName>
+      <label>Layer over cut</label>
+      <description>Layer silicone onto a cut.</description>
+      <jobString>Mending cut.</jobString>
+      <removesHediff>Cut</removesHediff>
+      <successfullyRemovedHediffMessage>Silicone has been layered onto {0}'s cut.</successfullyRemovedHediffMessage>
+   </RecipeDef>
+  
+  <RecipeDef ParentName="SiliconeScars">
+      <defName>SurgicalCutScar</defName>
+      <label>Layer over surgical cut</label>
+      <description>Layer silicone onto a surgical cut.</description>
+      <jobString>Mending surgical cut.</jobString>
+      <removesHediff>SurgicalCut</removesHediff>
+      <successfullyRemovedHediffMessage>Silicone has been layered onto {0}'s surgical cut.</successfullyRemovedHediffMessage>
+   </RecipeDef>
+   
+   <RecipeDef ParentName="SiliconeScars">
+      <defName>BiteScar</defName>
+      <label>Layer over bite</label>
+      <description>Layer silicone onto a bite.</description>
+      <jobString>Mending bite.</jobString>
+      <removesHediff>Bite</removesHediff>
+      <successfullyRemovedHediffMessage>Silicone has been layered onto {0}'s bite.</successfullyRemovedHediffMessage>
+   </RecipeDef>
+   
+   <RecipeDef ParentName="SiliconeScars">
+      <defName>FrostBiteScar</defName>
+      <label>Layer over frost bite</label>
+      <description>Layer silicone onto a frost bite.</description>
+      <jobString>Mending frost bite.</jobString>
+      <removesHediff>Frostbite</removesHediff>
+      <successfullyRemovedHediffMessage>Silicone has been layered onto {0}'s frost bite.</successfullyRemovedHediffMessage>
+   </RecipeDef>
+   
+   <RecipeDef ParentName="SiliconeScars">
+      <defName>StabScar</defName>
+      <label>Layer over stab</label>
+      <description>Layer silicone onto a stab.</description>
+      <jobString>Mending stab.</jobString>
+      <removesHediff>Stab</removesHediff>
+      <successfullyRemovedHediffMessage>Silicone has been layered onto {0}'s stab.</successfullyRemovedHediffMessage>
+   </RecipeDef>
+   
+   <RecipeDef ParentName="SiliconeScars">
+      <defName>GunshotScar</defName>
+      <label>Layer over gunshot</label>
+      <description>Layer silicone onto a gunshot.</description>
+      <jobString>Mending gunshot.</jobString>
+      <removesHediff>Gunshot</removesHediff>
+      <successfullyRemovedHediffMessage>Silicone has been layered onto {0}'s gunshot.</successfullyRemovedHediffMessage>
+   </RecipeDef>
+  
+  <RecipeDef ParentName="SiliconeScars">
+      <defName>ShreddedScar</defName>
+      <label>Layer over shredded</label>
+      <description>Layer silicone onto a shredded scar.</description>
+      <jobString>Mending shredded.</jobString>
+      <removesHediff>Shredded</removesHediff>
+      <successfullyRemovedHediffMessage>Silicone has been layered onto {0}'s shredded body part.</successfullyRemovedHediffMessage>
+   </RecipeDef>
   	
+	<!-- ============ BASES ============= -->
+	
+	<RecipeDef Abstract="True" Name="SurgeryFlesh">
+		<effectWorking>Surgery</effectWorking>
+		<soundWorking>Recipe_Surgery</soundWorking>
+		<workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+		<workSkill>Medicine</workSkill>
+		<workSkillLearnFactor>16</workSkillLearnFactor>
+	</RecipeDef>
+	
 </Defs>
