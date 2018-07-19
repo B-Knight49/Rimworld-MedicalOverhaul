@@ -85,6 +85,25 @@
 	</HediffDef>
 	
 	<HediffDef ParentName="DiseaseBase">
+		<defName>PainkillerHediff</defName>
+		<defaultLabelColor>(1, 0.2, 0.5)</defaultLabelColor>
+		<label>Painkillers</label>
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>10000</min>
+			  <max>10000</max>
+			</disappearsAfterTicks>
+		  </li>
+		</comps>
+		<stages>
+		  <li>
+			<painFactor>0.1</painFactor>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
 		<defName>SuperAnti</defName>
 		<defaultLabelColor>(1, 0.2, 0.5)</defaultLabelColor>
 		<label>Super Antibiotics</label>

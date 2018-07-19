@@ -46,6 +46,47 @@
 		  </li>
 		</comps>
 	</ThingDef>
+	
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>Painkillers</defName>
+		<label>Painkillers</label>
+		<description>Kills pain - now in tablet form!</description>
+		<graphicData>
+		  <texPath>Things/Item/Drug/Penoxycyline</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+		  <WorkToMake>500</WorkToMake>
+		  <MarketValue>32</MarketValue>
+		  <Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>PainkillerHediff</hediffDef>
+			  <severity>1.0</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+		  <recipeUsers>
+			<li>DrugLab</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<costList>
+		  <Neutroamine>2</Neutroamine>
+		</costList>
+		<comps>
+		  <li Class="CompProperties_Drug">
+			<listOrder>1000</listOrder>
+		  </li>
+		</comps>
+	</ThingDef>
   
     <ThingDef ParentName="MakeableDrugPillBase">
 		<defName>Antibiotics</defName>

@@ -18,7 +18,7 @@ namespace IV
     {
 
         public static HediffDef IV_Painkiller = HediffDef.Named("IV_Painkiller");
-        private CompPowerTrader powerComp = null;
+        private CompRefuelable refuelComp = null;
 
         public Building_PainMachine()
             : base()
@@ -30,7 +30,7 @@ namespace IV
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            powerComp = base.GetComp<CompPowerTrader>();
+            refuelComp = base.GetComp<CompRefuelable>();
         }
 
         // Repeat code every Tick (might change it to TickRare at some point)
@@ -41,7 +41,7 @@ namespace IV
             {
                 base.Tick();
 
-                if (powerComp.PowerOn)
+                if (refuelComp.HasFuel == true)
                 {
                     ApplyIV();
                 }
@@ -62,6 +62,8 @@ namespace IV
                     {
                         Pawn pawn = thing as Pawn;
                         pawn.health.AddHediff(IV_Painkiller);
+
+                        refuelComp.ConsumeFuel(0.02f);
                     }
 
                 }

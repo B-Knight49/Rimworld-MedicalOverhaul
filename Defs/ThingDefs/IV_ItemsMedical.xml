@@ -19,7 +19,7 @@
 		  <MarketValue>5</MarketValue>
 		  <Mass>0.5</Mass>
 		  <Flammability>1.0</Flammability>
-		  <MedicalPotency>0.2</MedicalPotency>
+		  <MedicalPotency>0.25</MedicalPotency>
 		  <DeteriorationRate>2</DeteriorationRate>
 		  <WorkToMake>200</WorkToMake>
 		</statBases>

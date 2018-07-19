@@ -75,7 +75,7 @@
 	<thingClass>IV.Building_Filter</thingClass>
 	<tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Building/Misc/IV_Vent</texPath>
+      <texPath>Things/Building/Misc/IV_Dialysis</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <offset>(0,0,-0.3)</offset>
@@ -142,7 +142,7 @@
 	<thingClass>IV.Building_Bypass</thingClass>
 	<tickerType>Normal</tickerType>
     <graphicData>
-      <texPath>Things/Building/Misc/IV_Vent</texPath>
+      <texPath>Things/Building/Misc/IV_Bypass</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shadowData>
         <offset>(0,0,-0.3)</offset>
@@ -316,12 +316,20 @@
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
     <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>true</startElectricalFires>
-        <basePowerConsumption>10</basePowerConsumption>
-      </li>
-      <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Flickable"/>
+	  	  <li Class="CompProperties_Refuelable">
+        <fuelCapacity>150.0</fuelCapacity>
+        <fuelFilter>
+          <categories>
+            <li>FoodRaw</li>
+          </categories>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>50</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+		<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+	   </li>
       <li Class="CompProperties_Facility">
         <statOffsets>
           <MedicalTendQualityOffset>0.05</MedicalTendQualityOffset>
@@ -383,12 +391,20 @@
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
     <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>true</startElectricalFires>
-        <basePowerConsumption>30</basePowerConsumption>
-      </li>
-      <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Flickable"/>
+	  	  <li Class="CompProperties_Refuelable">
+        <fuelCapacity>15.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>Painkillers</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>50</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+		<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+	   </li>
       <li Class="CompProperties_Facility">
         <statOffsets>
           <MedicalTendQualityOffset>0.05</MedicalTendQualityOffset>
@@ -450,12 +466,20 @@
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
     <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>true</startElectricalFires>
-        <basePowerConsumption>50</basePowerConsumption>
-      </li>
-      <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Refuelable">
+        <fuelCapacity>15.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>Antibiotics</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>50</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+		<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+	   </li>
       <li Class="CompProperties_Facility">
         <statOffsets>
           <MedicalTendQualityOffset>0.05</MedicalTendQualityOffset>

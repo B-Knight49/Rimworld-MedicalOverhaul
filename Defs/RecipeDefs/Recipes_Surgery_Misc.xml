@@ -2,6 +2,8 @@
 
 <Defs>
 
+	<!-- This technically doesn't work either. The game just makes its own because Serum1 is injestible -->
+
 	<RecipeDef>
 		<defName>AdministerBloodInjection</defName>
 		<label>Inject Coagulant</label>
@@ -28,6 +30,37 @@
 			<thingDefs>
 				<li>SerumOne</li>
 			</thingDefs>
+		</fixedIngredientFilter>
+	</RecipeDef>
+	
+	<!-- =============== WHY DONT YOU WORK???????????? ================== -->
+	
+	<RecipeDef>
+		<defName>DrawBlood</defName>
+		<label>Draw Blood From Pawn</label>
+		<description>Draw blood from pawn.</description>
+		<workerClass>IV.Recipe_DrawBlood</workerClass>	<!-- Don't worry about this line, it's C# stuff and wouldn't affect the .XML side of things -->
+		<jobString>Drawing blood...</jobString>
+		<recipeUsers>
+         <li>Human</li>
+        </recipeUsers>
+		<targetsBodyPart>false</targetsBodyPart>
+		<workAmount>0</workAmount>
+		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
 		</fixedIngredientFilter>
 	</RecipeDef>
 	
