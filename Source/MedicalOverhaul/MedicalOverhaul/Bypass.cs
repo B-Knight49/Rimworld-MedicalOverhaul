@@ -23,11 +23,21 @@ class Main
 }
 
 [HarmonyPatch(typeof(HediffSet), "CalculateBleedRate")]
-static class HarmonyPatches
+static class BleedPatch
 {
     static void Postfix(ref float __result, HediffSet __instance)
     {
         __result *= __instance.pawn.GetStatValue(StatDef.Named("BleedRate"));
+    }
+}
+
+[HarmonyPatch(typeof(Pawn))]
+[HarmonyPatch("CurrentlyUsableForBills")]
+static class SurgeryBedPatch
+{
+    static void Postfix(ref bool __result)
+    {
+        __result = true;
     }
 }
 

@@ -2,51 +2,15 @@
 
 <Defs>
 
-	<!-- This technically doesn't work either. The game just makes its own because Serum1 is injestible -->
-
-	<RecipeDef>
-		<defName>AdministerBloodInjection</defName>
-		<label>Inject Coagulant</label>
-		<description>Injects the Pawn with coagulant.</description>
-		<workerClass>Recipe_AdministerUsableItem</workerClass>
-		<jobString>Injecting coagulant...</jobString>
-		<targetsBodyPart>false</targetsBodyPart>
-		<anesthetize>false</anesthetize>
-		<workAmount>50</workAmount>
-		<dontShowIfAnyIngredientMissing>false</dontShowIfAnyIngredientMissing>
-		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
-		<requireBed>false</requireBed>
-		<ingredients>
-			<li>
-				<filter>
-					<thingDefs>
-						<li>SerumOne</li>
-					</thingDefs>
-				</filter>
-				<count>1</count>
-			</li>
-		</ingredients>
-		<fixedIngredientFilter>
-			<thingDefs>
-				<li>SerumOne</li>
-			</thingDefs>
-		</fixedIngredientFilter>
-	</RecipeDef>
-	
-	<!-- =============== WHY DONT YOU WORK???????????? ================== -->
-	
-	<RecipeDef>
-		<defName>DrawBlood</defName>
-		<label>Draw Blood From Pawn</label>
-		<description>Draw blood from pawn.</description>
-		<workerClass>IV.Recipe_DrawBlood</workerClass>	<!-- Don't worry about this line, it's C# stuff and wouldn't affect the .XML side of things -->
-		<jobString>Drawing blood...</jobString>
+	<RecipeDef Name="DrawBlood" ParentName="SurgeryFlesh" Abstract="True">
+	    <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
+        <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
 		<recipeUsers>
          <li>Human</li>
         </recipeUsers>
-		<targetsBodyPart>false</targetsBodyPart>
+		<workerClass>IV.Recipe_DrawBlood</workerClass>
 		<workAmount>0</workAmount>
-		<surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+		<targetsBodyPart>false</targetsBodyPart>
 		<ingredients>
 			<li>
 				<filter>
@@ -63,6 +27,13 @@
 			</categories>
 		</fixedIngredientFilter>
 	</RecipeDef>
+	
+	<RecipeDef ParentName="DrawBlood">
+      <defName>DrawBloodChild</defName>
+      <label>Draw Blood</label>
+	  <description>Draw blood from pawn.</description>
+      <jobString>Drawing blood...</jobString>
+   </RecipeDef>
 	
 	<RecipeDef Name="SiliconeScars" ParentName="SurgeryFlesh" Abstract="True">
       <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
