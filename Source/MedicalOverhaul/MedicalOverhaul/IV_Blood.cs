@@ -19,7 +19,7 @@ namespace IV
     {
 
         public static HediffDef IV_BloodTransfusion = HediffDef.Named("IV_BloodTransfusion");
-        private CompPowerTrader powerComp = null;
+        private CompRefuelable refuelComp = null;
 
         public Building_BloodMachine()
             : base()
@@ -31,7 +31,7 @@ namespace IV
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            powerComp = base.GetComp<CompPowerTrader>();
+            refuelComp = base.GetComp<CompRefuelable>();
         }
 
         // Repeat code every Tick (might change it to TickRare at some point)
@@ -42,7 +42,7 @@ namespace IV
             {
                 base.Tick();
 
-                if (powerComp.PowerOn)
+                if (refuelComp.HasFuel)
                 {
                     ApplyIV();
                 }
@@ -63,6 +63,8 @@ namespace IV
                     {
                         Pawn pawn = thing as Pawn;
                         pawn.health.AddHediff(IV_BloodTransfusion);
+
+                        refuelComp.ConsumeFuel(0.02f);
                     }
 
                 }

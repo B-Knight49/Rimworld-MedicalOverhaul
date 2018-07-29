@@ -248,12 +248,20 @@
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
     <comps>
-      <li Class="CompProperties_Power">
-        <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>true</startElectricalFires>
-        <basePowerConsumption>50</basePowerConsumption>
-      </li>
-      <li Class="CompProperties_Flickable"/>
+	  <li Class="CompProperties_Flickable"/>
+	  	  <li Class="CompProperties_Refuelable">
+        <fuelCapacity>15.0</fuelCapacity>
+        <fuelFilter>
+          <thingDefs>
+            <li>IV_BloodBag</li>
+          </thingDefs>
+        </fuelFilter>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <autoRefuelPercent>50</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <drawOutOfFuelOverlay>true</drawOutOfFuelOverlay>
+		<drawFuelGaugeInMap>false</drawFuelGaugeInMap>
+	   </li>
       <li Class="CompProperties_Facility">
         <statOffsets>
           <MedicalTendQualityOffset>0.05</MedicalTendQualityOffset>

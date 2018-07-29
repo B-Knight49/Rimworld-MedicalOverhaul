@@ -12,34 +12,6 @@ using IV;
 using System.Collections;
 using System.Reflection;
 
-[StaticConstructorOnStartup]
-class Main
-{
-    static Main()
-    {
-        var harmony = HarmonyInstance.Create("com.medical.iv");
-        harmony.PatchAll(Assembly.GetExecutingAssembly());
-    }
-}
-
-[HarmonyPatch(typeof(HediffSet), "CalculateBleedRate")]
-static class BleedPatch
-{
-    static void Postfix(ref float __result, HediffSet __instance)
-    {
-        __result *= __instance.pawn.GetStatValue(StatDef.Named("BleedRate"));
-    }
-}
-
-[HarmonyPatch(typeof(Pawn))]
-[HarmonyPatch("CurrentlyUsableForBills")]
-static class SurgeryBedPatch
-{
-    static void Postfix(ref bool __result)
-    {
-        __result = true;
-    }
-}
 
 namespace IV
 {

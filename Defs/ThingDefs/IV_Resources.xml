@@ -109,4 +109,24 @@
     </thingCategories>
   </ThingDef>
   
+  <ThingDef ParentName="ResourceBase">
+    <defName>IV_BloodBag</defName>
+    <label>Blood Bag</label>
+    <description>A plastic bag containing a decent amount of human blood. Type? Who cares.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Synthread</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>1</MarketValue>
+      <Mass>0.026</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Medicine</li>
+    </thingCategories>
+  </ThingDef>
+  
 </Defs>
