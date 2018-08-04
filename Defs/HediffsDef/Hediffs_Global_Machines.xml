@@ -100,5 +100,64 @@
 		  </li>
 		</stages>
 	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_Mechanite</defName>
+		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+		<label>Mechanite Suffuser</label>
+		
+		<!-- Keep the pawn weakened for 2ish days -->
+		
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>180000</min>
+			  <max>180000</max>
+			</disappearsAfterTicks>
+		  </li>
+		</comps>
+		
+		<stages>
+		  <li>
+			<label>Weakness</label>
+			<painOffset>0.25</painOffset>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.5</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_Mechanite2</defName>
+		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
+		<label>Mechanite Suffuser (HIDDEN)</label>
+		
+		<!-- Keep the pawn unconscious for 1ish day -->
+		
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>75000</min>
+			  <max>75000</max>
+			</disappearsAfterTicks>
+		  </li>
+		</comps>
+		
+		<stages>
+		  <li>
+		    <becomeVisible>false</becomeVisible>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<setMax>0.1</setMax>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
 
 </Defs>

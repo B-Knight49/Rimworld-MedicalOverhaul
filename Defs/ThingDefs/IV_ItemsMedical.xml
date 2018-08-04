@@ -83,6 +83,10 @@
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
+		<overdoseSeverityOffset>
+          <min>0.40</min>
+          <max>0.79</max>
+        </overdoseSeverityOffset>
         <listOrder>1000</listOrder>
       </li>
     </comps>
@@ -119,6 +123,184 @@
     <comps>
       <li Class="CompProperties_Drug">
         <listOrder>1000</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="IV_InjectBase">
+    <defName>MorphineSerum</defName>
+    <label>Morphine Autoinjector</label>
+    <description>An injectable, single use syringe which sends morphine straight into the blood stream. Meant for field use only. Quite addictive.</description>
+    <thingClass>Medicine</thingClass>
+	
+	<rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Things/Item/Drugs/IV_Morphine</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    
+    <statBases>
+      <WorkToMake>7500</WorkToMake>
+      <MarketValue>100</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+	
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>IV_MorphineHediff</hediffDef>
+          <severity>0.12</severity>
+        </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MorphineTolerance</hediffDef>
+          <severity>0.032</severity>
+          <divideByBodySize>true</divideByBodySize>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>MedicineProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+	  <CrushedStem>4</CrushedStem>
+      <Neutroamine>2</Neutroamine>
+	  <Steel>1</Steel>
+	  <Component>2</Component>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+	    <chemical>Morphine</chemical>
+		<addictiveness>0.020</addictiveness>
+		<minToleranceToAddict>0.15</minToleranceToAddict>
+		<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+		<needLevelOffset>1</needLevelOffset>
+		<overdoseSeverityOffset>
+          <min>0.12</min>
+          <max>0.23</max>
+        </overdoseSeverityOffset>
+		<listOrder>30</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  
+  <!-- Morphine addiction -->
+
+  <ChemicalDef>
+    <defName>Morphine</defName>
+    <label>Morphine</label>
+    <addictionHediff>MorphineAddiction</addictionHediff>
+    <canBinge>true</canBinge>
+  </ChemicalDef>
+
+  <NeedDef ParentName="DrugAddictionNeedBase">
+    <defName>Chemical_Morphine</defName>
+    <needClass>Need_Chemical</needClass>
+    <label>Morphine</label>
+    <description>Morphine, being an opiate, provides a pleasant high and is quite addictive. This person has developed an addiction to it because of this.</description>
+	<listPriority>45</listPriority>
+  </NeedDef>
+
+  <HediffDef ParentName="DrugToleranceBase">
+    <defName>MorphineTolerance</defName>
+    <label>morphine tolerance</label>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.020</severityPerDay>
+      </li>
+      <li Class="HediffCompProperties_DrugEffectFactor">
+        <chemical>Morphine</chemical>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddictionBase">
+    <defName>MorphineAddiction</defName>
+    <hediffClass>Hediff_Addiction</hediffClass>
+    <label>morphine addiction</label>
+    <causesNeed>Chemical_Morphine</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0.1</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+      </li>
+      <li>
+        <label>withdrawal</label>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>MorphineWithdrawal</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>MorphineAddiction</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <visible>false</visible>
+      </li>
+      <li>
+        <label>morphine withdrawal</label>
+        <description>I crave the warm embrace of morphine running through my veins...</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
+  <ThingDef ParentName="IV_InjectBase">
+    <defName>EpiSerum</defName>
+    <label>Epinephrine Autoinjector</label>
+    <description>An injectable, single use syringe which sends adrenaline straight into the blood stream. Meant for field use only.</description>
+    <thingClass>Medicine</thingClass>
+	
+	<rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Things/Item/Drugs/IV_EpiPen</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    
+    <statBases>
+      <WorkToMake>7500</WorkToMake>
+      <MarketValue>100</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+	
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>IV_EpiHediff</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>MedicineProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+	  <CrushedStem>4</CrushedStem>
+      <Neutroamine>2</Neutroamine>
+	  <Steel>1</Steel>
+	  <Component>2</Component>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+		<overdoseSeverityOffset>
+          <min>0.08</min>
+          <max>0.14</max>
+        </overdoseSeverityOffset>
+		<listOrder>30</listOrder>
       </li>
     </comps>
   </ThingDef>

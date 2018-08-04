@@ -30,6 +30,7 @@
 			</capMods>
 		  </li>
 		  <li>
+			<lifeThreatening>true</lifeThreatening>
 			<label>(Overdose)</label>
 			<minSeverity>1</minSeverity>
 			<capMods>
@@ -60,6 +61,136 @@
 			  <li>
 				<capacity>BleedRate</capacity>
 				<offset>-0.50</offset>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_MorphineHediff</defName>
+		<defaultLabelColor>(0.3, 0.3, 0.8)</defaultLabelColor>
+		<label>Morphine Autoinjector</label>
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>10000</min>
+			  <max>10000</max>
+			</disappearsAfterTicks>
+		  </li>
+		</comps>
+		<stages>
+		  <li>
+			<painFactor>0</painFactor>
+			<minSeverity>0.12</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.9</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+			<painFactor>0</painFactor>
+			<minSeverity>0.24</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.85</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+		  	<painFactor>0</painFactor>
+			<minSeverity>0.36</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.8</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+		  	<painFactor>0</painFactor>
+			<label>Slightly High</label>
+			<minSeverity>0.48</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Breathing</capacity>
+				<postFactor>0.9</postFactor>
+			  </li>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.75</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+		  	<painFactor>0</painFactor>
+			<label>High</label>
+			<minSeverity>0.6</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Breathing</capacity>
+				<postFactor>0.8</postFactor>
+			  </li>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.7</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+		  	<painFactor>0</painFactor>
+			<label>Dangerously High</label>
+			<minSeverity>0.72</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Breathing</capacity>
+				<postFactor>0.7</postFactor>
+			  </li>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.5</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		  <li>
+		  	<painFactor>0</painFactor>
+			<label>Overdose</label>
+			<minSeverity>0.84</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Breathing</capacity>
+				<postFactor>0.60</postFactor>
+			  </li>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.1</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_EpiHediff</defName>
+		<defaultLabelColor>(0.3, 0.3, 0.8)</defaultLabelColor>
+		<label>Morphine Autoinjector</label>
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>10000</min>
+			  <max>10000</max>
+			</disappearsAfterTicks>
+		  </li>
+		</comps>
+		<stages>
+		  <li>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>1.5</offset>
 			  </li>
 			</capMods>
 		  </li>

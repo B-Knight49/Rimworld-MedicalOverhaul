@@ -47,7 +47,7 @@
          <li>
            <filter>
               <thingDefs>
-                 <li>SiliconeSheet</li>
+                 <li>IV_SiliconeSheet</li>
               </thingDefs>
            </filter>
            <count>3</count>
@@ -58,7 +58,7 @@
 	  </appliedOnFixedBodyParts>
       <fixedIngredientFilter>
          <thingDefs>
-            <li>SiliconeSheet</li>
+            <li>IV_SiliconeSheet</li>
          </thingDefs>
       </fixedIngredientFilter>
    </RecipeDef>

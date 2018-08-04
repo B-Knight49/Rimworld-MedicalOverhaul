@@ -18,7 +18,7 @@
 			<li>
 				<filter>
 					<thingDefs>
-						<li>RawSilicone</li>
+						<li>IV_RawSilicone</li>
 					</thingDefs>
 				</filter>
 				<count>25</count>
@@ -26,11 +26,11 @@
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>RawSilicone</li>
+				<li>IV_RawSilicone</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<Silicone>15</Silicone>
+			<IV_Silicone>15</IV_Silicone>
 		</products>
 	</RecipeDef>
 	
@@ -51,7 +51,7 @@
       <li>
         <filter>
           <thingDefs>
-            <li>Silicone</li>
+            <li>IV_Silicone</li>
           </thingDefs>
         </filter>
         <count>5</count>
@@ -59,11 +59,11 @@
     </ingredients>
     <fixedIngredientFilter>
       <thingDefs>
-        <li>Silicone</li>
+        <li>IV_Silicone</li>
       </thingDefs>
     </fixedIngredientFilter>
     <products>
-      <SiliconeSheet>1</SiliconeSheet>
+      <IV_SiliconeSheet>1</IV_SiliconeSheet>
     </products>
 		<skillRequirements>
 			<Crafting>5</Crafting>

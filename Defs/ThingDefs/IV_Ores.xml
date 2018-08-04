@@ -17,7 +17,7 @@
     <description>Oxygen, oil and pressure has come together on this distant Rimworld to create compressed silicone. Refine the ore to create Silicone polymers.</description>
     <building>
       <isResourceRock>true</isResourceRock>
-      <mineableThing>RawSilicone</mineableThing>
+      <mineableThing>IV_RawSilicone</mineableThing>
       <mineableYield>25</mineableYield>
       <mineableScatterCommonality>0.3</mineableScatterCommonality> 
       <mineableScatterLumpSizeRange>
