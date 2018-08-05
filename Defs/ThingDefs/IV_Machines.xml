@@ -23,7 +23,7 @@
       </damageData>
     </graphicData>
     <defaultPlacingRot>North</defaultPlacingRot>
-    <researchPrerequisites><li>VitalsMonitor</li></researchPrerequisites>
+    <researchPrerequisites><li>Ventilator</li></researchPrerequisites>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.2</fillPercent>
@@ -34,7 +34,7 @@
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
-    <description>[PLACEHOLDER]</description>
+    <description>An invasive life support device that forces air into the patient's lungs. To be used when pawn's breathing stat is at 0%.</description>
     <size>(1,1)</size>
     <costList>
       <Steel>200</Steel>
@@ -90,7 +90,7 @@
       </damageData>
     </graphicData>
     <defaultPlacingRot>North</defaultPlacingRot>
-    <researchPrerequisites><li>VitalsMonitor</li></researchPrerequisites>
+    <researchPrerequisites><li>Dialysis</li></researchPrerequisites>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.2</fillPercent>
@@ -101,7 +101,7 @@
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
-    <description>[PLACEHOLDER]</description>
+    <description>Life support machine that replaces kidney and liver function by filtering the bloodstream.</description>
     <size>(1,1)</size>
     <costList>
       <Steel>200</Steel>
@@ -157,7 +157,7 @@
       </damageData>
     </graphicData>
     <defaultPlacingRot>North</defaultPlacingRot>
-    <researchPrerequisites><li>VitalsMonitor</li></researchPrerequisites>
+    <researchPrerequisites><li>Bypass</li></researchPrerequisites>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.2</fillPercent>
@@ -168,7 +168,7 @@
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
-    <description>[PLACEHOLDER]</description>
+    <description>A life support machine that skips the heart and lungs, replacing the functionality of both. An expensive version of the Mechanical Ventilator with more features and less of a mood penalty.</description>
     <size>(1,1)</size>
     <costList>
       <Steel>200</Steel>
@@ -525,7 +525,7 @@
       </damageData>
     </graphicData>
     <defaultPlacingRot>North</defaultPlacingRot>
-    <researchPrerequisites><li>VitalsMonitor</li></researchPrerequisites>
+    <researchPrerequisites><li>LuciferiumMachine</li></researchPrerequisites>
     <altitudeLayer>Building</altitudeLayer>
     <passability>PassThroughOnly</passability>
     <fillPercent>0.2</fillPercent>
@@ -536,7 +536,7 @@
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
-    <description>[PLACEHOLDER]</description>
+    <description>A dispenser of dormant antimechanites used in Glitterworld hospitals. When loaded into this device, antimechanites can be programmed to target existing mechanites in the patient's body thus removing mechanite illnesses and a luciferium addiction. Requires Antinites to function.</description>
     <size>(1,1)</size>
     <costList>
       <Steel>200</Steel>
@@ -577,23 +577,6 @@
 			<li>PlaceWorker_ShowFacilitiesConnections</li>
 		</placeWorkers>
     <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
-  </ThingDef>
-  
- <!-- ======================== BASES ======================= -->
-	
-  <ThingDef Name="BuildingBase" Abstract="True">
-    <category>Building</category>
-    <thingClass>Building</thingClass>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <selectable>true</selectable>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <repairEffect>Repair</repairEffect>
-    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-    <filthLeaving>BuildingRubble</filthLeaving>
-		<statBases>
-			<SellPriceFactor>0.70</SellPriceFactor>
-		</statBases>
   </ThingDef>
   
 </Defs>

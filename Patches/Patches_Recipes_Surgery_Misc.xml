@@ -6,6 +6,7 @@
       <fixedIngredientFilter>
         <exceptedThingDefs>
           <li>ShiteBandage</li>
+		  <li>IV_BloodBag</li>
         </exceptedThingDefs>
       </fixedIngredientFilter>
     </value>
