@@ -108,8 +108,11 @@
 		<defaultLabelColor>(1, 0.2, 0.5)</defaultLabelColor>
 		<label>Super Antibiotics</label>
 		<comps>
-		  <li Class="HediffCompProperties_SeverityPerDay">
-			<severityPerDay>-0.18</severityPerDay>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>10000</min>
+			  <max>10000</max>
+			</disappearsAfterTicks>
 		  </li>
 		</comps>
 		<stages>
@@ -117,7 +120,7 @@
 			<capMods>
 			  <li>
 				<capacity>BloodFiltration</capacity>
-				<offset>5.0</offset>
+				<offset>0.5</offset>
 			  </li>
 			</capMods>
 		  </li>

@@ -53,6 +53,7 @@
     <Compile Include="HediffComp_HediffChanger.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="HediffCompProperties_HediffChanger.cs" />
+    <Compile Include="IngestionOutcomeDoer_SuperAntibiotics.cs" />
     <Compile Include="IV_Antibiotics.cs" />
     <Compile Include="IV_Blood.cs" />
     <Compile Include="IV_Food.cs" />
