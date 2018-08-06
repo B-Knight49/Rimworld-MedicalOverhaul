@@ -161,11 +161,6 @@
 		<defaultLabelColor>(1, 0.2, 0.5)</defaultLabelColor>
 		<label>Potassium Iodide</label>
 		<stages>
-        <li>
-		  <makeImmuneTo>
-			<li>ToxicBuildup</li>
-		  </makeImmuneTo>
-		</li>
       </stages>
 	</HediffDef>
 	

@@ -29,17 +29,23 @@ class Main
         HarmonyMethod bleed_postfix = new HarmonyMethod(typeof(BleedPatch).GetMethod("Patch_Postfix"));
         harmony.Patch(bleed_targetmethod, null, bleed_postfix);
 
+        // Patch SurgeryBedPatch
+
+        MethodInfo bed_targetmethod = AccessTools.Method(typeof(Pawn), "CurrentlyUsableForBills");
+        HarmonyMethod bed_postfix = new HarmonyMethod(typeof(SurgeryBedPatch).GetMethod("Patch_Postfix"));
+        harmony.Patch(bed_targetmethod, null, bed_postfix);
+
         // Patch GiverAndDoer
 
         MethodInfo work_targetmethod = AccessTools.Method(typeof(WorkGiver_DoBill), "TryStartNewDoBillJob");
         HarmonyMethod work_prefix = new HarmonyMethod(typeof(GiverAndDoer).GetMethod("Patch_Prefix"));
         harmony.Patch(work_targetmethod, work_prefix, null);
 
-        // Patch SurgeryBedPatch
+        // Patch ToxicImmunityPatch
 
-        MethodInfo bed_targetmethod = AccessTools.Method(typeof(Pawn), "CurrentlyUsableForBills");
-        HarmonyMethod bed_postfix = new HarmonyMethod(typeof(SurgeryBedPatch).GetMethod("Patch_Postfix"));
-        harmony.Patch(bed_targetmethod, null, bed_postfix);
+        MethodInfo toxic_targetmethod = AccessTools.Method(typeof(HealthUtility), "AdjustSeverity");
+        HarmonyMethod toxic_prefix = new HarmonyMethod(typeof(ToxicImmunityPatch).GetMethod("Patch_Prefix"));
+        harmony.Patch(toxic_targetmethod, toxic_prefix, null);
     }
 }
 
@@ -88,5 +94,34 @@ static class GiverAndDoer
             }
             return false;
         }
+    }
+}
+
+static class ToxicImmunityPatch
+{
+    public static bool Patch_Prefix(ref Pawn pawn, ref float sevOffset, ref HediffDef hdDef)
+    {
+        bool ConsumedTablets = false;
+
+        if (hdDef.ToString().Contains("ToxicBuildup"))
+        {
+            List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
+
+            foreach (Hediff hediff in Hediffs)
+            {
+                var StrHediff = hediff.ToString();
+                if (StrHediff.Contains("NoToxic"))
+                {
+                    ConsumedTablets = true;
+                }
+            }
+
+            if (ConsumedTablets == true)
+            {
+                sevOffset = sevOffset * 0.25f;
+            }
+            return true;
+        }
+        return true;
     }
 }

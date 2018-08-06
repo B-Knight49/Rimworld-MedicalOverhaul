@@ -24,7 +24,7 @@ namespace IV
 
         #pragma warning disable 0649
         private bool divideByBodySize;
-#pragma warning restore 0649
+        #pragma warning restore 0649
 
         public static HediffDef HiddenAntibiotics;
 
