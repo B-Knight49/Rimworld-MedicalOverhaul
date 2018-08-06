@@ -35,14 +35,14 @@ namespace IV
                 var StrHediff = hediff.ToString();
                 if (StrHediff.Contains("HeartArteryBlockage"))
                 {
-                    if (hediff.Severity <= 0.05)
+                    if (hediff.Severity > 0.0007f)
                     {
-                        Log.Message("[Medical Overhaul] " + hediff.Severity);
-                        hediff.Severity -= 0.05f;
+                        hediff.Severity -= 0.00075f;
                     }
-                    else
+                    else if (hediff.Severity <= 0.0007f)
                     {
-                        base.Pawn.health.RemoveHediff(hediff);
+                        //base.Pawn.health.RemoveHediff(hediff);
+                        return;
                     }
                 }
             }
