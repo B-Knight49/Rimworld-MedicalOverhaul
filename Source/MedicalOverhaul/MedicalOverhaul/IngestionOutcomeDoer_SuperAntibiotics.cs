@@ -21,11 +21,9 @@ namespace IV
         public float severity = -1f;
 
         public ChemicalDef toleranceChemical;
-
         #pragma warning disable 0649
-        private bool divideByBodySize;
+        private readonly bool divideByBodySize;
         #pragma warning restore 0649
-
         public static HediffDef HiddenAntibiotics;
 
         protected override void DoIngestionOutcomeSpecial(Pawn pawn, Thing ingested)

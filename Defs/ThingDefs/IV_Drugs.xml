@@ -255,5 +255,46 @@
 		  </li>
 		</comps>
 	</ThingDef>
+	
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>MilkThistleExtract</defName>
+		<label>Milk Thistle Extract</label>
+		<description>Small seeds and petals extracted from a Milk Thistle flower used to help treat Cirrhosis.</description>
+		<graphicData>
+		  <texPath>Things/Item/Drugs/IV_MilkThistleExtract</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+		  <WorkToMake>500</WorkToMake>
+		  <MarketValue>32</MarketValue>
+		  <Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>
+		  <outcomeDoers>
+			<li Class="IV.IngestionOutcomeDoer_MilkThistle">
+			  <hediffDef>MilkThistleBenefit</hediffDef>
+			  <severity>1.0</severity>
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+		  <recipeUsers>
+			<li>DrugLab</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<costList>
+		  <Neutroamine>2</Neutroamine>
+		</costList>
+		<comps>
+		  <li Class="CompProperties_Drug">
+			<listOrder>1000</listOrder>
+		  </li>
+		</comps>
+	</ThingDef>
   
 </Defs>
