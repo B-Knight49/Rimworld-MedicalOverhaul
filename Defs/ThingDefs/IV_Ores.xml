@@ -8,7 +8,7 @@
       <texPath>Things/Building/Linked/RockFlecked_Atlas</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <color>(50,50,50)</color>
+      <color>(100,100,100)</color>
       <colorTwo>(0,0,0)</colorTwo>
     </graphicData>
     <statBases>

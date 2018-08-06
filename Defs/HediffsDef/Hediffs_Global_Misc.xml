@@ -176,7 +176,7 @@
 	<HediffDef ParentName="DiseaseBase">
 		<defName>IV_EpiHediff</defName>
 		<defaultLabelColor>(0.3, 0.3, 0.8)</defaultLabelColor>
-		<label>Morphine Autoinjector</label>
+		<label>Epinphrine Autoinjector</label>
 		<comps>
 		  <li Class="HediffCompProperties_Disappears">
 			<disappearsAfterTicks>
@@ -190,7 +190,36 @@
 			<capMods>
 			  <li>
 				<capacity>Consciousness</capacity>
-				<offset>1.5</offset>
+				<offset>2.2</offset>
+			  </li>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>0.50</offset>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_EpiHediffComeDown</defName>
+		<defaultLabelColor>(0.3, 0.3, 0.8)</defaultLabelColor>
+		<label>Epinphrine Autoinjector Come Down</label>
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>30000</min>
+			  <max>30000</max>
+			</disappearsAfterTicks>
+		  </li>
+		</comps>
+		<stages>
+		  <li>
+		  <becomeVisible>false</becomeVisible>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<offset>-0.7</offset>
 			  </li>
 			</capMods>
 		  </li>

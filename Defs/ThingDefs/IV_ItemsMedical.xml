@@ -280,6 +280,10 @@
           <hediffDef>IV_EpiHediff</hediffDef>
           <severity>1</severity>
         </li>
+		<li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>IV_EpiHediffComeDown</hediffDef>
+          <severity>1</severity>
+        </li>
       </outcomeDoers>
     </ingestible>
     <recipeMaker>
