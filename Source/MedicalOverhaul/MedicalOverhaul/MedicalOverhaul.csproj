@@ -60,6 +60,7 @@
     <Compile Include="IV_Painkiller.cs" />
     <Compile Include="HarmonyPatches.cs" />
     <Compile Include="Mechanite.cs" />
+    <Compile Include="Recipe_Scars.cs" />
     <Compile Include="Recipe_DrawBlood.cs" />
     <Compile Include="Ventillator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

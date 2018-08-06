@@ -71,8 +71,8 @@ static class GiverAndDoer
     {
         if (!bill.ToString().Contains("Bill_Administer_SerumOne") && !bill.ToString().Contains("Bill_Administer_MorphineSerum") && !bill.ToString().Contains("Bill_Administer_EpiSerum"))                              // If bill is NOT Injectable Coagulant OR Morphine OR Epinephrine then:
         {
-            Log.Message("[Case 1]" + "Patient: " + giver + "Surgeon: " + pawn);
-            Log.Message("Bill Name: " + bill);
+            //Log.Message("[Case 1]" + "Patient: " + giver + "Surgeon: " + pawn);
+            //Log.Message("Bill Name: " + bill);
             if (pawn.ToString() != giver.ToString())                                            // If patient is NOT the same as surgeon then:
             {
                 Pawn giverPawn = giver as Pawn;
@@ -87,7 +87,7 @@ static class GiverAndDoer
 
         else                                                                                    // If bill IS Injectable Coagulant OR Morphine OR Epinephrine then:
         {
-            Log.Message("[Case 2]" + "Patient: " + giver + "Surgeon: " + pawn);
+            //Log.Message("[Case 2]" + "Patient: " + giver + "Surgeon: " + pawn);
             if (pawn.ToString() != giver.ToString())                                            // If patient is NOT the same as surgeon then:
             {
                 return true;                                                                    // Do bill
