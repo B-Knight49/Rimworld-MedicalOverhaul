@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
 	<name>Medical Overhaul</name>
-	<author>Knight / Kotobuki</author>
+	<author>Knight / Kotobuki Mugi</author>
 	<targetVersion>0.18.0</targetVersion>
-	<description>Medical Overhaul for Rimworld. Adds Intravenous Therapy, medications for chronic and local illnesses and life support machines such as mechanical ventilators.</description>
+	<description>A complete overhaul for the medical system in Rimworld. This mod adds several new machines, injections, new health problems and benefits as well as medications that will help prevent or treat existing issues within the game.</description>
 </ModMetaData>
