@@ -18,4 +18,27 @@
 			</li>
 		</capacityFactors>
 	</StatDef>
+	
+	<StatDef>
+		<defName>DiabeticCapacity</defName>
+		<label>Diabetic</label>
+		<description>Effects on Capacity for being diabetic.</description>
+		<category>BasicsPawn</category>
+		<defaultBaseValue>1</defaultBaseValue>
+		<toStringStyle>PercentZero</toStringStyle>
+		<hideAtValue>1</hideAtValue>
+		<minValue>0.1</minValue>
+		<showOnMechanoids>false</showOnMechanoids>
+		<capacityOffsets>
+			<li>
+				<capacity>Consciousness</capacity>
+				<scale>-0.15</scale>
+			</li>
+			<li>
+				<capacity>BloodFiltration</capacity>
+				<scale>-0.25</scale>
+			</li>
+		</capacityOffsets>
+	</StatDef>
+	
 </Defs>

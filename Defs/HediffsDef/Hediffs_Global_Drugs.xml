@@ -157,6 +157,21 @@
 	</HediffDef>
 	
 	<HediffDef ParentName="DiseaseBase">
+		<defName>MethadoneHediff</defName>
+		<defaultLabelColor>(1, 0.2, 0.5)</defaultLabelColor>
+		<label>Methadone</label>
+		<comps>
+		  <li Class="IV.HediffCompProperties_Methadone"/>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>75000</min>
+			  <max>75000</max>
+			</disappearsAfterTicks>
+		  </li>
+		</comps>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
 		<defName>NoToxic</defName>
 		<defaultLabelColor>(1, 0.2, 0.5)</defaultLabelColor>
 		<label>Potassium Iodide</label>

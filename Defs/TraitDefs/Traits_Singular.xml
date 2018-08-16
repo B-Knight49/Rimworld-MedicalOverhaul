@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <TraitDef>
+    <defName>Diabetic</defName>
+    <commonality>0.1</commonality>
+    <degreeDatas>
+      <li>
+        <label>diabetic</label>
+		<statFactors>
+			<DiabeticCapacity>1</DiabeticCapacity>
+		</statFactors>
+        <description>NAME suffers from diabeties and requires insulin injections every 2 days to ensure he doesn't become ill or weak.</description>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+	
+</Defs>

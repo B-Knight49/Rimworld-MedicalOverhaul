@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>*/BiomeDef[defName="BorealForest"]/wildPlants</xpath>
+    <value>
+      <PlantWildMilkThistle>0.2</PlantWildMilkThistle>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationAdd">
+    <xpath>*/BiomeDef[defName="Tundra"]/wildPlants</xpath>
+    <value>
+      <PlantWildMilkThistle>0.0025</PlantWildMilkThistle>
+    </value>
+  </Operation>
+  
+</Patch>

@@ -308,5 +308,56 @@
       </li>
     </comps>
   </ThingDef>
+  
+  <ThingDef ParentName="IV_InjectBase">
+    <defName>InsulinSerum</defName>
+    <label>Insulin Injection</label>
+    <description>An injectable, single use syringe which sends insulin straight into the blood stream. Used to treat diabetes and keep its symptoms at bay.</description>
+    <thingClass>Medicine</thingClass>
+	
+	<rotatable>false</rotatable>
+    <graphicData>
+      <texPath>Things/Item/Drugs/IV_Insulin</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    
+    <statBases>
+      <WorkToMake>7500</WorkToMake>
+      <MarketValue>100</MarketValue>
+      <Mass>0.005</Mass>
+    </statBases>
+    <techLevel>Spacer</techLevel>
+	
+    <ingestible>
+      <drugCategory>Medical</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>IV_InsulinHediff</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <recipeMaker>
+      <researchPrerequisite>MedicineProduction</researchPrerequisite>
+      <recipeUsers>
+        <li>DrugLab</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+	  <CrushedStem>4</CrushedStem>
+      <Neutroamine>2</Neutroamine>
+	  <Steel>1</Steel>
+	  <Component>2</Component>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Drug">
+		<overdoseSeverityOffset>
+          <min>0.08</min>
+          <max>0.14</max>
+        </overdoseSeverityOffset>
+		<listOrder>30</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
  
 </Defs>

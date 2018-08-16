@@ -50,9 +50,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bypass.cs" />
+    <Compile Include="HediffCompProperties_Methadone.cs" />
     <Compile Include="HediffComp_HediffChanger.cs" />
     <Compile Include="Filter.cs" />
     <Compile Include="HediffCompProperties_HediffChanger.cs" />
+    <Compile Include="HediffComp_Methadone.cs" />
     <Compile Include="IngestionOutcomeDoer_MilkThistle.cs" />
     <Compile Include="IngestionOutcomeDoer_SuperAntibiotics.cs" />
     <Compile Include="IV_Antibiotics.cs" />
