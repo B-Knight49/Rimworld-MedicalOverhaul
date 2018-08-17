@@ -46,6 +46,18 @@ class Main
         MethodInfo toxic_targetmethod = AccessTools.Method(typeof(HealthUtility), "AdjustSeverity");
         HarmonyMethod toxic_prefix = new HarmonyMethod(typeof(ToxicImmunityPatch).GetMethod("Patch_Prefix"));
         harmony.Patch(toxic_targetmethod, toxic_prefix, null);
+
+        // Patch BlockOpiateNeed
+
+        MethodInfo need_targetmethod = AccessTools.Method(typeof(IngestionOutcomeDoer_OffsetNeed), "DoIngestionOutcomeSpecial");
+        HarmonyMethod need_prefix = new HarmonyMethod(typeof(BlockOpiateNeed).GetMethod("Patch_Prefix"));
+        harmony.Patch(need_targetmethod, need_prefix, null);
+
+        // Patch BlockOpiateHediff
+
+        MethodInfo hediff_targetmethod = AccessTools.Method(typeof(IngestionOutcomeDoer_GiveHediff), "DoIngestionOutcomeSpecial");
+        HarmonyMethod hediff_prefix = new HarmonyMethod(typeof(BlockOpiateHediff).GetMethod("Patch_Prefix"));
+        harmony.Patch(hediff_targetmethod, hediff_prefix, null);
     }
 }
 
@@ -121,6 +133,62 @@ static class ToxicImmunityPatch
                 sevOffset = sevOffset * 0.25f;
             }
             return true;
+        }
+        return true;
+    }
+}
+
+static class BlockOpiateNeed
+{
+    public static bool Patch_Prefix(ref Pawn pawn, ref Thing ingested)
+    {
+        List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
+        bool pawnNarcan = false;
+        string ingestedString = ingested.ToString();
+
+        foreach (Hediff hediff in Hediffs)
+        {
+            if (hediff.ToString().Contains("NarcanHediff"))
+            {
+                pawnNarcan = true;
+            }
+        }
+
+        if (pawnNarcan == true)
+        {
+            if (ingestedString.Contains("GoJuice") || ingestedString.Contains("WakeUp") || ingestedString.Contains("Flake"))
+            {
+                // Narcan blocks the consumption of the opiate
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+static class BlockOpiateHediff
+{
+    public static bool Patch_Prefix(ref Pawn pawn, ref Thing ingested)
+    {
+        List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
+        bool pawnNarcan = false;
+        string ingestedString = ingested.ToString();
+
+        foreach (Hediff hediff in Hediffs)
+        {
+            if (hediff.ToString().Contains("NarcanHediff"))
+            {
+                pawnNarcan = true;
+            }
+        }
+
+        if (pawnNarcan == true)
+        {
+            if (ingestedString.Contains("GoJuice") || ingestedString.Contains("WakeUp") || ingestedString.Contains("Flake"))
+            {
+                // Narcan blocks the consumption of the opiate
+                return false;
+            }
         }
         return true;
     }

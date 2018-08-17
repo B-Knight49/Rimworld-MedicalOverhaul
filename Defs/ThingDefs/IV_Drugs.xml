@@ -257,11 +257,11 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="MakeableDrugPillBase">
-		<defName>Methadone</defName>
-		<label>Methadone</label>
-		<description>A replacement drug which helps with opiate addictions.</description>
+		<defName>Narcan</defName>
+		<label>Narcan</label>
+		<description>A drug to block the uptake of opiates. Used for overdose treatment - removes Wake-Up, Flake and Go-Juice from the system.</description>
 		<graphicData>
-		  <texPath>Things/Item/Drugs/IV_Methadone</texPath>
+		  <texPath>Things/Item/Drugs/IV_Narcan</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<socialPropernessMatters>false</socialPropernessMatters>
@@ -276,7 +276,7 @@
 		  <drugCategory>Medical</drugCategory>
 		  <outcomeDoers>
 			<li Class="IngestionOutcomeDoer_GiveHediff">
-			  <hediffDef>MethadoneHediff</hediffDef>
+			  <hediffDef>NarcanHediff</hediffDef>
 			  <severity>1.0</severity>
 			</li>
 		  </outcomeDoers>

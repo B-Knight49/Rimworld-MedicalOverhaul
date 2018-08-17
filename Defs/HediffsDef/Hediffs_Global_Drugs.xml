@@ -157,9 +157,9 @@
 	</HediffDef>
 	
 	<HediffDef ParentName="DiseaseBase">
-		<defName>MethadoneHediff</defName>
+		<defName>NarcanHediff</defName>
 		<defaultLabelColor>(1, 0.2, 0.5)</defaultLabelColor>
-		<label>Methadone</label>
+		<label>Narcan</label>
 		<comps>
 		  <li Class="IV.HediffCompProperties_Methadone"/>
 		  <li Class="HediffCompProperties_Disappears">

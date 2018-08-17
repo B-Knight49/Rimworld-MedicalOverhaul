@@ -38,10 +38,9 @@ namespace IV
                 // - WakeUp
 
                 var StrHediff = hediff.ToString();
-                if (StrHediff.Contains("Flake") || StrHediff.Contains("GoJuice") || StrHediff.Contains("WakeUp"))
+                if (StrHediff.Contains("FlakeHigh") || StrHediff.Contains("GoJuiceHigh") || StrHediff.Contains("WakeUpHigh"))
                 {
                     base.Pawn.health.RemoveHediff(hediff);
-                    Log.Message("Removed hediff: " + hediff);
                 }
             }
         }
