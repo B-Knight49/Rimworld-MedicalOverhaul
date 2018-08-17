@@ -254,4 +254,70 @@
 		</stages>
 	</HediffDef>
 	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_DiabetesHediff</defName>
+		<defaultLabelColor>(0.5, 0.5, 0.5)</defaultLabelColor>
+		<label>Diabetes</label>
+		<maxSeverity>0.60</maxSeverity>
+		<comps>
+		  <li Class="HediffCompProperties_SeverityPerDay">
+			<severityPerDay>0.15</severityPerDay>
+		  </li>
+		</comps>
+		<stages>
+		<li>
+			<minSeverity>0</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>1</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		<!--- 1 day without insulin -->
+		  <li>
+			<minSeverity>0.15</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.75</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		  <!--- 2 days without insulin -->
+		  <li>
+			<label>Mild Hyperglycemia</label>
+			<minSeverity>0.30</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.50</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		  <!--- 3 days without insulin -->
+		  <li>
+			<label>Severe Hyperglycemia</label>
+			<minSeverity>0.45</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.25</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		  <!--- 4 days without insulin / Coma -->
+		  <li>
+			<label>Hyperglycemia Coma</label>
+			<minSeverity>0.60</minSeverity>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<postFactor>0.0</postFactor>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
 </Defs>

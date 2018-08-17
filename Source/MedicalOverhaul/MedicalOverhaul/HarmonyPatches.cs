@@ -58,6 +58,12 @@ class Main
         MethodInfo hediff_targetmethod = AccessTools.Method(typeof(IngestionOutcomeDoer_GiveHediff), "DoIngestionOutcomeSpecial");
         HarmonyMethod hediff_prefix = new HarmonyMethod(typeof(BlockOpiateHediff).GetMethod("Patch_Prefix"));
         harmony.Patch(hediff_targetmethod, hediff_prefix, null);
+
+        // Patch DiabetesTrait
+
+        MethodInfo trait_targetmethod = AccessTools.Method(typeof(PawnGenerator), "GenerateInitialHediffs");
+        HarmonyMethod trait_postfix = new HarmonyMethod(typeof(DiabetesTrait).GetMethod("Patch_Postfix"));
+        harmony.Patch(trait_targetmethod, null, trait_postfix);
     }
 }
 
@@ -191,5 +197,25 @@ static class BlockOpiateHediff
             }
         }
         return true;
+    }
+}
+
+static class DiabetesTrait
+{
+    public static TraitDef Diabetes = TraitDef.Named("Diabetic");
+    public static HediffDef DiabetesHediff = HediffDef.Named("IV_DiabetesHediff");
+
+    public static void Patch_Postfix(ref Pawn pawn)
+    {
+        if (pawn != null)
+        {
+            if (pawn.RaceProps.Humanlike)
+            {
+                if (pawn.story.traits.HasTrait(Diabetes))
+                {
+                    pawn.health.AddHediff(DiabetesHediff);
+                }
+            }
+        }
     }
 }
