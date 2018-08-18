@@ -6,6 +6,7 @@
 		<defName>IV_BloodTransfusion</defName>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
 		<label>Intravenous Therapy (Blood)</label>
+		<maxSeverity>0.01</maxSeverity>
 		<comps>
 		  <li Class="HediffCompProperties_Disappears">
 			<disappearsAfterTicks>
@@ -30,6 +31,7 @@
 		<defName>IV_Painkiller</defName>
 		<defaultLabelColor>(1, 1, 0.2)</defaultLabelColor>
 		<label>Intravenous Therapy (Painkiller)</label>
+		<maxSeverity>0.01</maxSeverity>
 		<comps>
 		  <li Class="HediffCompProperties_Disappears">
 			<disappearsAfterTicks>
@@ -49,6 +51,7 @@
 		<defName>IV_Food</defName>
 		<defaultLabelColor>(0.2, 1, 0.2)</defaultLabelColor>
 		<label>Intravenous Therapy (Nutrition)</label>
+		<maxSeverity>0.01</maxSeverity>
 		<comps>
 		  <li Class="HediffCompProperties_Disappears">
 			<disappearsAfterTicks>
@@ -68,6 +71,7 @@
 		<defName>IV_Antibiotics</defName>
 		<defaultLabelColor>(0.5, 0.5, 1)</defaultLabelColor>
 		<label>Intravenous Therapy (Antibiotics)</label>
+		<maxSeverity>0.01</maxSeverity>
 		<comps>
 		  <li Class="HediffCompProperties_Disappears">
 			<disappearsAfterTicks>

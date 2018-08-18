@@ -17,6 +17,7 @@ namespace IV
     public class Building_Filter : Building
     {
         public static HediffDef IV_Filter = HediffDef.Named("IV_Filter");
+        public static ThoughtDef DialysisThought = ThoughtDef.Named("DialysisThought");
         private CompPowerTrader powerComp = null;
 
         public Building_Filter()
@@ -74,6 +75,22 @@ namespace IV
             {
                 pawn.health.AddHediff(IV_Filter);
 
+                List<Thought_Memory> PawnMems = pawn.needs.mood.thoughts.memories.Memories.ToList();
+                bool alreadyHas = false;
+                foreach (Thought_Memory Memory in PawnMems)
+                {
+                    if (Memory.ToString().Contains("DialysisThought"))
+                    {
+                        alreadyHas = true;
+                    }
+                }
+
+                if (!alreadyHas)
+                {
+                    pawn.needs.mood.thoughts.memories.TryGainMemory(DialysisThought, null);
+                }
+                
+
                 // Stop the "Acute Liver Failure" or "Acute Kidney Failure" hediff from increasing
                 List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
 
@@ -83,11 +100,11 @@ namespace IV
                     var StrHediff = hediff.ToString();
                     if (StrHediff.Contains("KidneyFailure"))
                     {
-                        pawn.health.RemoveHediff(hediff);
+                        hediff.Severity = 0.00f;
                     }
                     if (StrHediff.Contains("LiverFailure"))
                     {
-                        pawn.health.RemoveHediff(hediff);
+                        hediff.Severity = 0.00f;
                     }
                 }
 

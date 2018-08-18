@@ -18,6 +18,7 @@ namespace IV
     public class Building_Bypass : Building
     {
         public static HediffDef IV_Bypass = HediffDef.Named("IV_Bypass");
+        public static ThoughtDef BypassThought = ThoughtDef.Named("BypassThought");
         private CompPowerTrader powerComp = null;
 
         public Building_Bypass()
@@ -76,6 +77,21 @@ namespace IV
             {
                 pawn.health.AddHediff(IV_Bypass);
 
+                List<Thought_Memory> PawnMems = pawn.needs.mood.thoughts.memories.Memories.ToList();
+                bool alreadyHas = false;
+                foreach (Thought_Memory Memory in PawnMems)
+                {
+                    if (Memory.ToString().Contains("BypassThought"))
+                    {
+                        alreadyHas = true;
+                    }
+                }
+
+                if (!alreadyHas)
+                {
+                    pawn.needs.mood.thoughts.memories.TryGainMemory(BypassThought, null);
+                }
+              
                 // Stop the "Oxygen Deprivation" or "No Heartbeat" hediff from increasing
                 List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
 
@@ -85,11 +101,11 @@ namespace IV
                     var StrHediff = hediff.ToString();
                     if (StrHediff.Contains("ClinicalDeathNoHeartbeat"))
                     {
-                        pawn.health.RemoveHediff(hediff);
+                        hediff.Severity = 0.00f;
                     }
                     if (StrHediff.Contains("ClinicalDeathAsphyxiation"))
                     {
-                        pawn.health.RemoveHediff(hediff);
+                        hediff.Severity = 0.00f;
                     }
                 }
 

@@ -18,6 +18,7 @@ namespace IV
     {
         public static HediffDef IV_Vent = HediffDef.Named("IV_Vent");
         public static HediffDef DR_Oxygen = HediffDef.Named("ClinicalDeathAsphyxiation");
+        public static ThoughtDef MechanicalThought = ThoughtDef.Named("MechanicalThought");
         private CompPowerTrader powerComp = null;
 
         public Building_Ventil()
@@ -75,6 +76,22 @@ namespace IV
             {
                 pawn.health.AddHediff(IV_Vent);
 
+                List<Thought_Memory> PawnMems = pawn.needs.mood.thoughts.memories.Memories.ToList();
+                bool alreadyHas = false;
+                foreach (Thought_Memory Memory in PawnMems)
+                {
+                    if (Memory.ToString().Contains("MechanicalThought"))
+                    {
+                        alreadyHas = true;
+                    }
+                }
+
+                if (!alreadyHas)
+                {
+                    Log.Message("Adding bad thought");
+                    pawn.needs.mood.thoughts.memories.TryGainMemory(MechanicalThought, null);
+                }
+
                 // Stop the "Oxygen Deprivation" hediff from increasing
                 List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
 
@@ -83,7 +100,7 @@ namespace IV
                     var StrHediff = hediff.ToString();
                     if (StrHediff.Contains("ClinicalDeathAsphyxiation"))
                     {
-                        pawn.health.RemoveHediff(hediff);
+                        hediff.Severity = 0.00f;
                     }
                 }
 

@@ -6,6 +6,7 @@
 		<defName>IV_Vent</defName>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
 		<label>Mechanical Ventilator</label>
+		<maxSeverity>0.01</maxSeverity>
 		
 		<!-- Give player 1 minute before Pawn dies of oxygen deprivation -->
 		<comps>
@@ -35,6 +36,7 @@
 		<defName>IV_Filter</defName>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
 		<label>Dialysis Machine</label>
+		<maxSeverity>0.01</maxSeverity>
 		
 		<!-- Humans will see severe illness in a day without proper kidney function (20,000 ticks in Rimworld = one IG day) -->
 		<comps>
@@ -68,6 +70,7 @@
 		<defName>IV_Bypass</defName>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
 		<label>Heart/Lung Bypass</label>
+		<maxSeverity>0.01</maxSeverity>
 		
 		<!-- Give player 30 seconds before Pawn dies of oxygen deprivation / no heartbeat -->
 		<comps>
@@ -105,6 +108,7 @@
 		<defName>IV_Mechanite</defName>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
 		<label>Mechanite Suffuser</label>
+		<maxSeverity>0.01</maxSeverity>
 		
 		<!-- Keep the pawn weakened for 2ish days -->
 		
@@ -135,6 +139,7 @@
 		<defName>IV_Mechanite2</defName>
 		<defaultLabelColor>(1, 0.2, 0.2)</defaultLabelColor>
 		<label>Mechanite Suffuser (HIDDEN)</label>
+		<maxSeverity>0.01</maxSeverity>
 		
 		<!-- Keep the pawn unconscious for 1ish day -->
 		
