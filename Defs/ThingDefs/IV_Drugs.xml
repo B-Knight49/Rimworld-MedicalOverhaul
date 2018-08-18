@@ -175,8 +175,8 @@
 		<label>Aspirin</label>
 		<description>Anti-inflammatory drug that gradually helps with artery blockages and heart problems.</description>
 		<graphicData>
-		  <texPath>Things/Item/Drugs/IV_Aspirin</texPath>
-		  <graphicClass>Graphic_Single</graphicClass>
+		  <texPath>Things/Item/Drugs/Aspirin</texPath>
+		  <graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<socialPropernessMatters>false</socialPropernessMatters>
 		<rotatable>false</rotatable>
