@@ -49,23 +49,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bypass.cs" />
-    <Compile Include="HediffCompProperties_Methadone.cs" />
-    <Compile Include="HediffComp_HediffChanger.cs" />
-    <Compile Include="Filter.cs" />
-    <Compile Include="HediffCompProperties_HediffChanger.cs" />
-    <Compile Include="HediffComp_Methadone.cs" />
-    <Compile Include="IngestionOutcomeDoer_MilkThistle.cs" />
-    <Compile Include="IngestionOutcomeDoer_SuperAntibiotics.cs" />
-    <Compile Include="IV_Antibiotics.cs" />
-    <Compile Include="IV_Blood.cs" />
-    <Compile Include="IV_Food.cs" />
-    <Compile Include="IV_Painkiller.cs" />
+    <Compile Include="Machines\Bypass.cs" />
+    <Compile Include="Hediffs\HediffCompProperties_Methadone.cs" />
+    <Compile Include="Hediffs\HediffComp_HediffChanger.cs" />
+    <Compile Include="Machines\Filter.cs" />
+    <Compile Include="Hediffs\HediffCompProperties_HediffChanger.cs" />
+    <Compile Include="Hediffs\HediffComp_Methadone.cs" />
+    <Compile Include="Ingestion\IngestionOutcomeDoer_MilkThistle.cs" />
+    <Compile Include="Ingestion\IngestionOutcomeDoer_SuperAntibiotics.cs" />
+    <Compile Include="Machines\IV_Antibiotics.cs" />
+    <Compile Include="Machines\IV_Blood.cs" />
+    <Compile Include="Machines\IV_Food.cs" />
+    <Compile Include="Machines\IV_Painkiller.cs" />
     <Compile Include="HarmonyPatches.cs" />
-    <Compile Include="Mechanite.cs" />
-    <Compile Include="Recipe_Scars.cs" />
-    <Compile Include="Recipe_DrawBlood.cs" />
-    <Compile Include="Ventillator.cs" />
+    <Compile Include="Machines\Mechanite.cs" />
+    <Compile Include="Recipes\Recipe_Scars.cs" />
+    <Compile Include="Recipes\Recipe_DrawBlood.cs" />
+    <Compile Include="Machines\Ventillator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
