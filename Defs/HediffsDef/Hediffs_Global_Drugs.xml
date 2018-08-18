@@ -152,6 +152,7 @@
 		<label>Aspirin</label>
 		<comps>
 		  <li Class="IV.HediffCompProperties_HediffChanger">
+			<hediffToReduce>HeartArteryBlockage</hediffToReduce>
 		  </li>
 		</comps>
 	</HediffDef>

@@ -29,21 +29,47 @@ namespace IV
         {
             List<Hediff> Hediffs = base.Pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
 
+            string reducedHediff = Props.hediffToReduce;
+
             foreach (Hediff hediff in Hediffs)
             {
+                var listHediff = hediff.ToString();
 
-                var StrHediff = hediff.ToString();
-                if (StrHediff.Contains("HeartArteryBlockage"))
+                if (reducedHediff.Contains("IV_DiabetesHediff"))
                 {
-                    if (hediff.Severity > 0.0007f)
+                    if (listHediff.Contains("IV_DiabetesHediff"))
                     {
-                        hediff.Severity -= 0.00075f;
+                        if (hediff.Severity > 0.15f)
+                        {
+                            hediff.Severity -= 0.15f;
+                        }
+                        else if (hediff.Severity <= 0.15f)
+                        {
+                            hediff.Severity = 0.01f;
+                            return;
+                        }
                     }
-                    else if (hediff.Severity <= 0.0007f)
+                }
+
+                if (reducedHediff.Contains("HeartArteryBlockage"))
+                {
+                    if (listHediff.Contains("HeartArteryBlockage"))
                     {
-                        //base.Pawn.health.RemoveHediff(hediff);
-                        return;
+                        if (hediff.Severity > 0.0007f)
+                        {
+                            hediff.Severity -= 0.00075f;
+                        }
+                        else if (hediff.Severity <= 0.0007f)
+                        {
+                            //base.Pawn.health.RemoveHediff(hediff);
+                            return;
+                        }
                     }
+                }
+
+                else
+                {
+                    return;
                 }
             }
         }

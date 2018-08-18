@@ -16,6 +16,8 @@ namespace IV
 {
     public class HediffCompProperties_HediffChanger : HediffCompProperties
     {
+        public string hediffToReduce;
+
         public HediffCompProperties_HediffChanger()
         {
             base.compClass = typeof(HediffComp_HediffChanger);
