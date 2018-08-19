@@ -304,4 +304,52 @@
 		</stages>
 	</HediffDef>
 	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_BrokenBone1</defName>
+		<defaultLabelColor>(0.5, 0, 0)</defaultLabelColor>
+		<label>Broken</label>
+		<tendable>true</tendable>
+		<initialSeverity>0.5</initialSeverity>
+		<comps>
+		  <li Class="HediffCompProperties_TendDuration">
+			<tendDuration>60000</tendDuration>
+			<severityPerDayTended>-0.05</severityPerDayTended>
+		  </li>
+		</comps>
+		<stages>
+		  <li>
+			<capMods>
+			  <li>
+				<capacity>Moving</capacity>
+				<offset>-0.7</offset>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_BrokenBone2</defName>
+		<defaultLabelColor>(0.5, 0, 0)</defaultLabelColor>
+		<label>Broken</label>
+		<tendable>true</tendable>
+		<initialSeverity>0.5</initialSeverity>
+		<comps>
+		  <li Class="HediffCompProperties_TendDuration">
+			<tendDuration>60000</tendDuration>
+			<severityPerDayTended>-0.05</severityPerDayTended>
+		  </li>
+		</comps>
+		<stages>
+		  <li>
+			<capMods>
+			  <li>
+				<capacity>Manipulation</capacity>
+				<offset>-0.7</offset>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
+	
 </Defs>

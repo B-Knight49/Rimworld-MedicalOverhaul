@@ -64,6 +64,12 @@ class Main
         MethodInfo trait_targetmethod = AccessTools.Method(typeof(PawnGenerator), "GenerateInitialHediffs");
         HarmonyMethod trait_postfix = new HarmonyMethod(typeof(DiabetesTrait).GetMethod("Patch_Postfix"));
         harmony.Patch(trait_targetmethod, null, trait_postfix);
+
+        // Patch LimbEfficiency
+
+        MethodInfo limb_targetmethod = AccessTools.Method(typeof(PawnCapacityUtility), "CalculatePartEfficiency");
+        HarmonyMethod limb_postfix = new HarmonyMethod(typeof(LimbEfficiency).GetMethod("Patch_Postfix"));
+        harmony.Patch(limb_targetmethod, null, limb_postfix);
     }
 }
 
@@ -214,6 +220,55 @@ static class DiabetesTrait
                 if (pawn.story.traits.HasTrait(Diabetes))
                 {
                     pawn.health.AddHediff(DiabetesHediff);
+                }
+            }
+        }
+    }
+}
+
+static class LimbEfficiency
+{
+    public static HediffDef BrokenBone1 = HediffDef.Named("IV_BrokenBone1");
+    public static HediffDef BrokenBone2 = HediffDef.Named("IV_BrokenBone2");
+
+    public static void Patch_Postfix(BodyPartRecord part, float __result, HediffSet diffSet)
+    {
+        Pawn partOwner = diffSet.pawn;
+        List<Hediff> Hediffs             = partOwner.health.hediffSet.GetHediffs<Hediff>().ToList();
+        var partList                     = new List<string> { "LeftClavicle", "RightClavicle", "Sternum", "LeftHumerus", "RightHumerus", "LeftRadius", "RightRadius", "Pelvis", "LeftFemur", "RightFemur", "LeftTibia", "RightTibia" };
+        var movingParts                  = new List<string> { "Sternum", "Pelvis", "LeftFemur", "RightFemur","LeftTibia","RightTibia"};
+        var manipulationParts            = new List<string> { "LeftClavicle", "RightClavicle", "LeftHumerus", "RightHumerus", "LeftRadius", "RightRadius"};
+        List<BodyPartRecord> brokenParts = new List<BodyPartRecord>();
+        string partString                = part.def.ToString();
+
+        foreach (Hediff hediff in Hediffs)
+        {
+            if (hediff.ToString().Contains("IV_BrokenBone"))
+            {
+                brokenParts.Add(hediff.Part);
+            }
+        }
+
+        if (partList.Contains(partString))
+        {
+            if (!brokenParts.Contains(part))
+            {
+                if (__result < 0.40f)
+                {
+                    if (movingParts.Contains(partString))
+                    {
+                        partOwner.health.AddHediff(BrokenBone1, part);
+                        return;
+                    }
+                    if (manipulationParts.Contains(partString))
+                    {
+                        partOwner.health.AddHediff(BrokenBone2, part);
+                        return;
+                    }
+                    else
+                    {
+                        Log.Warning("Bone is neither moving part or manipulation part. Bone name = " + partString);
+                    }
                 }
             }
         }
