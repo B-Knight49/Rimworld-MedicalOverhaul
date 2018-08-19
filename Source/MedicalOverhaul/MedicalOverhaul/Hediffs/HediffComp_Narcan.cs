@@ -29,6 +29,7 @@ namespace IV
         {
             List<Hediff> Hediffs = base.Pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
             bool opiateFound = false;
+            bool nonOpiateFound = false;
             bool overdosed = false;
             Hediff overdoseHediff = null;
 
@@ -40,11 +41,22 @@ namespace IV
                 // - GoJuice
                 // - WakeUp
 
+                bool currentOpiate = false;
+
                 var StrHediff = hediff.ToString();
                 if (StrHediff.Contains("FlakeHigh") || StrHediff.Contains("GoJuiceHigh") || StrHediff.Contains("WakeUpHigh"))
                 {
                     base.Pawn.health.RemoveHediff(hediff);
                     opiateFound = true;
+                    currentOpiate = true;
+                }
+
+                if (currentOpiate == false)
+                {
+                    if (StrHediff.Contains("High"))
+                    {
+                        nonOpiateFound = true;
+                    }
                 }
 
                 if (StrHediff.Contains("Overdose"))
@@ -53,7 +65,7 @@ namespace IV
                     overdoseHediff = hediff;
                 }
 
-                if (opiateFound == true && overdosed == true)
+                if (opiateFound == true && overdosed == true && nonOpiateFound == false)
                 {
                     if (overdoseHediff != null)
                     {
