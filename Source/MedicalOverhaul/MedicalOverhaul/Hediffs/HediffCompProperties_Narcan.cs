@@ -14,11 +14,11 @@ using System.Reflection;
 
 namespace IV
 {
-    public class HediffCompProperties_Methadone : HediffCompProperties
+    public class HediffCompProperties_Narcan : HediffCompProperties
     {
-        public HediffCompProperties_Methadone()
+        public HediffCompProperties_Narcan()
         {
-            base.compClass = typeof(HediffComp_Methadone);
+            base.compClass = typeof(HediffComp_Narcan);
         }
     }
 }

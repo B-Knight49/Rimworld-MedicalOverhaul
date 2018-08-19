@@ -162,7 +162,7 @@
 		<defaultLabelColor>(1, 0.2, 0.5)</defaultLabelColor>
 		<label>Narcan</label>
 		<comps>
-		  <li Class="IV.HediffCompProperties_Methadone"/>
+		  <li Class="IV.HediffCompProperties_Narcan"/>
 		  <li Class="HediffCompProperties_Disappears">
 			<disappearsAfterTicks>
 			  <min>75000</min>

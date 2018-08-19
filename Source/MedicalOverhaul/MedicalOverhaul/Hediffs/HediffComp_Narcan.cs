@@ -14,20 +14,23 @@ using System.Reflection;
 
 namespace IV
 {
-    public class HediffComp_Methadone : HediffComp
+    public class HediffComp_Narcan : HediffComp
     {
 
-        public HediffCompProperties_Methadone Props
+        public HediffCompProperties_Narcan Props
         {
             get
             {
-                return (HediffCompProperties_Methadone)base.props;
+                return (HediffCompProperties_Narcan)base.props;
             }
         }
 
         public override void CompPostMake()
         {
             List<Hediff> Hediffs = base.Pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
+            bool opiateFound = false;
+            bool overdosed = false;
+            Hediff overdoseHediff = null;
 
             foreach (Hediff hediff in Hediffs)
             {
@@ -41,6 +44,21 @@ namespace IV
                 if (StrHediff.Contains("FlakeHigh") || StrHediff.Contains("GoJuiceHigh") || StrHediff.Contains("WakeUpHigh"))
                 {
                     base.Pawn.health.RemoveHediff(hediff);
+                    opiateFound = true;
+                }
+
+                if (StrHediff.Contains("Overdose"))
+                {
+                    overdosed = true;
+                    overdoseHediff = hediff;
+                }
+
+                if (opiateFound == true && overdosed == true)
+                {
+                    if (overdoseHediff != null)
+                    {
+                        overdoseHediff.Severity -= 0.5f;
+                    }
                 }
             }
         }
