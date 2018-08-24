@@ -100,11 +100,18 @@ static class GiverAndDoer
             if (pawn.ToString() != giver.ToString())                                            // If patient is NOT the same as surgeon then:
             {
                 Pawn giverPawn = giver as Pawn;
-                if (giverPawn.CurrentBed() != null)                                             // If patient IS in bed then:
+                try
                 {
-                    return true;                                                                // Do Bill
+                    if (giverPawn.CurrentBed() != null)                                         // If patient IS in bed then:
+                    {
+                        return true;                                                            // Do Bill
+                    }
+                    return false;
                 }
-                return false;
+                catch(NullReferenceException)                                                   // Error therefore bill is not medical so continue
+                {
+                    return true;
+                }
             }
             return false;
         }

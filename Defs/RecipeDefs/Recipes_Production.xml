@@ -70,5 +70,38 @@
 		</skillRequirements>
     <workSkill>Crafting</workSkill>
   </RecipeDef>
+  
+  <RecipeDef>
+		<defName>ProduceBloodBags</defName>
+		<label>Produce blood bags</label>
+		<description>Create O- blood (universal blood bags) from bloodstem and mechanites and squeeze it all into a bag.</description>
+		<jobString>Squeezing blood into bags</jobString>
+		<effectWorking>Cremate</effectWorking>
+		<soundWorking>Recipe_Cremate</soundWorking>
+		<workAmount>500</workAmount>
+		<workSkill>Intellectual</workSkill>
+		<recipeUsers>
+			 <li>DrugLab</li>
+		 </recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>CrushedStem</li>
+					</thingDefs>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>CrushedStem</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<IV_BloodBag>1</IV_BloodBag>
+		</products>
+		<researchPrerequisite>BloodStemMK2</researchPrerequisite>
+	</RecipeDef>
 	
 </Defs>

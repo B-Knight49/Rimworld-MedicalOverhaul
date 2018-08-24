@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BodyPartGroupDef>
+	<defName>SplintArms</defName>
+	<label>arms</label>
+	<listOrder>90</listOrder>
+  </BodyPartGroupDef>
+
+  <BodyPartGroupDef>
+	<defName>SplintLegs</defName>
+	<label>legs</label>
+	<listOrder>10</listOrder>
+  </BodyPartGroupDef>
+
+</Defs>

@@ -32,6 +32,22 @@
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
   </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>BloodStemMK2</defName>
+    <label>Bloodstem Infusion</label>
+    <description>Using mechanites, enzymes and some good ol' bloodstem you think you can create raw, synthesised blood.</description>
+    <descriptionDiscovered>Using mechanites, enzymes and some good ol' bloodstem you've managed to create raw, synthesised blood.</descriptionDiscovered>
+    <baseCost>1500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>MedicalOverhaul</tab>
+    <researchViewX>8</researchViewX>
+    <researchViewY>3.5</researchViewY>
+    <prerequisites>
+      <li>PoweredMedicalMachine</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef>
 	
   <ResearchProjectDef>
     <defName>NutritionIV</defName>
