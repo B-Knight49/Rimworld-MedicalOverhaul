@@ -257,11 +257,11 @@
 	</ThingDef>
 	
 	<ThingDef ParentName="MakeableDrugPillBase">
-		<defName>Narcan</defName>
-		<label>Narcan</label>
-		<description>A drug to block the uptake of opiates. Used for overdose treatment - removes Wake-Up, Flake and Go-Juice from the system.</description>
+		<defName>Panpsychan</defName>
+		<label>Panpsychan</label>
+		<description>A drug to block the uptake of stimulants. Used for overdose treatment.</description>
 		<graphicData>
-		  <texPath>Things/Item/Drugs/IV_Narcan</texPath>
+		  <texPath>Things/Item/Drugs/IV_Panpsychan</texPath>
 		  <graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<socialPropernessMatters>false</socialPropernessMatters>
@@ -276,7 +276,7 @@
 		  <drugCategory>Medical</drugCategory>
 		  <outcomeDoers>
 			<li Class="IngestionOutcomeDoer_GiveHediff">
-			  <hediffDef>NarcanHediff</hediffDef>
+			  <hediffDef>PanpsychanHediff</hediffDef>
 			  <severity>1.0</severity>
 			</li>
 		  </outcomeDoers>

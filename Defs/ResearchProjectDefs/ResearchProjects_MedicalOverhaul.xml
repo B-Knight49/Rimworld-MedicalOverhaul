@@ -34,6 +34,19 @@
   </ResearchProjectDef>
   
   <ResearchProjectDef>
+    <defName>DrugEnhancements</defName>
+    <label>Drug Enhancements</label>
+    <description>Prerequisite for making already useful drugs more useful-er...</description>
+    <descriptionDiscovered>Prerequisite for making already useful drugs more useful-er....</descriptionDiscovered>
+    <baseCost>1500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>MedicalOverhaul</tab>
+    <researchViewX>8</researchViewX>
+    <researchViewY>3.5</researchViewY>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
     <defName>BloodStemMK2</defName>
     <label>Bloodstem Infusion</label>
     <description>Using mechanites, enzymes and some good ol' bloodstem you think you can create raw, synthesised blood.</description>
@@ -41,8 +54,24 @@
     <baseCost>1500</baseCost>
     <techLevel>Spacer</techLevel>
     <tab>MedicalOverhaul</tab>
-    <researchViewX>8</researchViewX>
-    <researchViewY>3.5</researchViewY>
+    <researchViewX>9</researchViewX>
+    <researchViewY>4.5</researchViewY>
+    <prerequisites>
+      <li>PoweredMedicalMachine</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>PanpsychanMK2</defName>
+    <label>Panscyhan Enhancement</label>
+    <description>The enhancement of panpsychan to treat more overdoses and disable the effects of more, harder drugs.</description>
+    <descriptionDiscovered>The enhancement of panpsychan to treat more overdoses and disable the effects of more, harder drugs.</descriptionDiscovered>
+    <baseCost>1500</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>MedicalOverhaul</tab>
+    <researchViewX>9</researchViewX>
+    <researchViewY>2.5</researchViewY>
     <prerequisites>
       <li>PoweredMedicalMachine</li>
     </prerequisites>

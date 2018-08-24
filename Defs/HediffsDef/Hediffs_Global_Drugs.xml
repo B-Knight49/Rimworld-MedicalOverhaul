@@ -158,11 +158,11 @@
 	</HediffDef>
 	
 	<HediffDef ParentName="DiseaseBase">
-		<defName>NarcanHediff</defName>
+		<defName>PanpsychanHediff</defName>
 		<defaultLabelColor>(1, 0.2, 0.5)</defaultLabelColor>
 		<label>Narcan</label>
 		<comps>
-		  <li Class="IV.HediffCompProperties_Narcan"/>
+		  <li Class="IV.HediffCompProperties_Panpsychan"/>
 		  <li Class="HediffCompProperties_Disappears">
 			<disappearsAfterTicks>
 			  <min>75000</min>
