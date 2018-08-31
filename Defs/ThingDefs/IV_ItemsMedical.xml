@@ -79,7 +79,7 @@
 	  <CrushedStem>4</CrushedStem>
       <Neutroamine>2</Neutroamine>
 	  <Steel>1</Steel>
-	  <Component>2</Component>
+	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
@@ -125,6 +125,9 @@
         <listOrder>1000</listOrder>
       </li>
     </comps>
+	<thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
   </ThingDef>
   
   <ThingDef ParentName="IV_InjectBase">
@@ -170,7 +173,7 @@
 	  <CrushedStem>4</CrushedStem>
       <Neutroamine>2</Neutroamine>
 	  <Steel>1</Steel>
-	  <Component>2</Component>
+	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
@@ -296,7 +299,7 @@
 	  <CrushedStem>4</CrushedStem>
       <Neutroamine>2</Neutroamine>
 	  <Steel>1</Steel>
-	  <Component>2</Component>
+	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
@@ -347,7 +350,7 @@
 	  <CrushedStem>4</CrushedStem>
       <Neutroamine>2</Neutroamine>
 	  <Steel>1</Steel>
-	  <Component>2</Component>
+	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">

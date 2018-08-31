@@ -41,15 +41,18 @@
 	  <Plasteel>15</Plasteel>
 	  <Silver>10</Silver>
     </costList>
+	<thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
     <designationCategory>Misc</designationCategory>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>true</startElectricalFires>
+        <shortCircuitInRain>true</shortCircuitInRain>
         <basePowerConsumption>150</basePowerConsumption>
       </li>
       <li Class="CompProperties_Flickable"/>
@@ -108,15 +111,18 @@
 	  <Plasteel>15</Plasteel>
 	  <Silver>10</Silver>
     </costList>
+	<thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
     <designationCategory>Misc</designationCategory>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>true</startElectricalFires>
+        <shortCircuitInRain>true</shortCircuitInRain>
         <basePowerConsumption>150</basePowerConsumption>
       </li>
       <li Class="CompProperties_Flickable"/>
@@ -175,15 +181,18 @@
 	  <Plasteel>15</Plasteel>
 	  <Silver>10</Silver>
     </costList>
+	<thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
     <designationCategory>Misc</designationCategory>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
     <comps>
       <li Class="CompProperties_Power">
         <compClass>CompPowerTrader</compClass>
-        <startElectricalFires>true</startElectricalFires>
+        <shortCircuitInRain>true</shortCircuitInRain>
         <basePowerConsumption>150</basePowerConsumption>
       </li>
       <li Class="CompProperties_Flickable"/>
@@ -242,8 +251,11 @@
 	  <Plasteel>15</Plasteel>
 	  <Silver>10</Silver>
     </costList>
+	<thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
     <designationCategory>Misc</designationCategory>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
@@ -318,8 +330,11 @@
 	  <Plasteel>5</Plasteel>
 	  <Silver>5</Silver>
     </costList>
+	<thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
     <designationCategory>Misc</designationCategory>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
@@ -393,8 +408,11 @@
 	  <Plasteel>5</Plasteel>
 	  <Silver>10</Silver>
     </costList>
+	<thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
     <designationCategory>Misc</designationCategory>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
@@ -468,8 +486,11 @@
 	  <Plasteel>15</Plasteel>
 	  <Silver>10</Silver>
     </costList>
+	<thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
     <designationCategory>Misc</designationCategory>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>
@@ -543,8 +564,11 @@
 	  <Plasteel>15</Plasteel>
 	  <Silver>10</Silver>
     </costList>
+	<thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
     <designationCategory>Misc</designationCategory>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <minifiedDef>MinifiedThing</minifiedDef>
 		<building>
 			<ai_chillDestination>false</ai_chillDestination>
 		</building>

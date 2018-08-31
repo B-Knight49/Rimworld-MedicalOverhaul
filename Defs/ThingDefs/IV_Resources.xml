@@ -147,9 +147,9 @@
     <thingCategories>
       <li>Medicine</li>
     </thingCategories>
-	<itemGeneratorTags>
-      <li>SpecialReward</li>
-    </itemGeneratorTags>
+	<thingSetMakerTags>
+      <li>RewardSpecial</li>
+    </thingSetMakerTags>
   </ThingDef>
   
 </Defs>

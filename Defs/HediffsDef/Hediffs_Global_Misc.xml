@@ -332,7 +332,7 @@
 		<initialSeverity>0.5</initialSeverity>
 		<comps>
 		  <li Class="HediffCompProperties_TendDuration">
-			<tendDuration>60000</tendDuration>
+			<baseTendDurationHours>24</baseTendDurationHours>
 			<severityPerDayTended>-0.05</severityPerDayTended>
 		  </li>
 		</comps>
@@ -357,7 +357,7 @@
 		<initialSeverity>0.5</initialSeverity>
 		<comps>
 		  <li Class="HediffCompProperties_TendDuration">
-			<tendDuration>60000</tendDuration>
+			<baseTendDurationHours>24</baseTendDurationHours>
 			<severityPerDayTended>-0.05</severityPerDayTended>
 		  </li>
 		</comps>

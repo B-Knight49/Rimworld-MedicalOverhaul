@@ -12,7 +12,7 @@
 		<workAmount>500</workAmount>
 		<workSkill>Intellectual</workSkill>
 		<recipeUsers>
-			 <li>Refinery</li>
+			 <li>BiofuelRefinery</li>
 		 </recipeUsers>
 		<ingredients>
 			<li>
@@ -45,7 +45,7 @@
     <workAmount>1000</workAmount>
     <unfinishedThingDef>UnfinishedComponent</unfinishedThingDef>
 	<recipeUsers>
-		<li>ComponentAssemblyBench</li>
+		<li>FabricationBench</li>
 	</recipeUsers>
     <ingredients>
       <li>

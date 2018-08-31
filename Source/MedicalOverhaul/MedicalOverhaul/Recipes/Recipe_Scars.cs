@@ -57,7 +57,7 @@ namespace IV
                 // Hediffs are in brackets. Remove open bracket to allow for comparison without issue
                 hediffName = hediffName.Replace("(","");
 
-                if (hediff.Part == part && hediff.IsOld())
+                if (hediff.Part == part && hediff.IsPermanent())
                 {
                     if (InjuryName.Contains(hediffName))
                     {

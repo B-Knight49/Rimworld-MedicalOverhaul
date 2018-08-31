@@ -34,7 +34,7 @@
       <HintPath>..\..\..\..\IV Medical\Assemblies\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
+      <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -49,6 +49,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Recipes\Recipe_Stomach.cs" />
     <Compile Include="Unique\Apparel_Splint.cs" />
     <Compile Include="Machines\Bypass.cs" />
     <Compile Include="Hediffs\HediffCompProperties_Panpsychan.cs" />

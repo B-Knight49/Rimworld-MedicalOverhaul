@@ -28,7 +28,6 @@
 	  <foodType>Processed</foodType>
       <preferability>NeverForNutrition</preferability>
       <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
-      <joyKind>Chemical</joyKind>
       <chairSearchRadius>8</chairSearchRadius>
     </ingestible>
     <storedConceptLearnOpportunity>DrugPolicies</storedConceptLearnOpportunity>

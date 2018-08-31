@@ -62,7 +62,7 @@ namespace IV
                     {
                         Pawn pawn = thing as Pawn;
                         pawn.health.AddHediff(IV_Food);
-                        pawn.needs.food.ForceSetLevel(1f);
+                        pawn.needs.food.CurLevelPercentage = 1f;
 
                         refuelComp.ConsumeFuel(0.2f);
 

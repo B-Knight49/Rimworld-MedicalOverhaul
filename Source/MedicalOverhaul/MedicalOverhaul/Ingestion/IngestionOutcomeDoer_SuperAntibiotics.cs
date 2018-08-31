@@ -72,7 +72,7 @@ namespace IV
         {
             if (parentDef.IsDrug && base.chance >= 1f)
             {
-                using (IEnumerator<StatDrawEntry> enumerator = this.hediffDef.SpecialDisplayStats().GetEnumerator())
+                using (IEnumerator<StatDrawEntry> enumerator = this.hediffDef.SpecialDisplayStats(StatRequest.ForEmpty()).GetEnumerator())
                 {
                     if (enumerator.MoveNext())
                     {

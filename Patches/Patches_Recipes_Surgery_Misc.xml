@@ -3,12 +3,12 @@
   <Operation Class="PatchOperationAdd">
     <xpath>*/RecipeDef[@Name="SurgeryFlesh"]</xpath>
     <value>
-      <fixedIngredientFilter>
-        <exceptedThingDefs>
+      <defaultIngredientFilter>
+        <disallowedThingDefs>
           <li>ShiteBandage</li>
 		  <li>IV_BloodBag</li>
-        </exceptedThingDefs>
-      </fixedIngredientFilter>
+        </disallowedThingDefs>
+      </defaultIngredientFilter>
     </value>
   </Operation>
 </Patch>

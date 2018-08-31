@@ -21,7 +21,6 @@
 		<plant>
 			<fertilitySensitivity>1.0</fertilitySensitivity>
 			<dieIfLeafless>true</dieIfLeafless>
-			<reproduces>false</reproduces>
 			<maxMeshCount>4</maxMeshCount>
 			<harvestTag>Standard</harvestTag>
 			<harvestedThingDef>Bloodstem</harvestedThingDef>
@@ -60,7 +59,6 @@
 		<plant>
 			<fertilitySensitivity>1.0</fertilitySensitivity>
 			<dieIfLeafless>true</dieIfLeafless>
-			<reproduces>false</reproduces>
 			<maxMeshCount>4</maxMeshCount>
 			<harvestTag>Standard</harvestTag>
 			<harvestedThingDef>MilkThistleExtract</harvestedThingDef>
@@ -105,12 +103,8 @@
 			<harvestTag>Standard</harvestTag>
 			<harvestedThingDef>MilkThistleExtract</harvestedThingDef>
 			<harvestYield>1</harvestYield>
-			<wildCommonalityMaxFraction>3.0</wildCommonalityMaxFraction>
-			<wildClusterSizeRange>
-				<min>1</min>
-				<max>3</max>
-			</wildClusterSizeRange>
 			<wildClusterRadius>3</wildClusterRadius>
+			<wildClusterWeight>40</wildClusterWeight>
 			<topWindExposure>0.1</topWindExposure>
 			<visualSizeRange>
 				<min>0.3</min>

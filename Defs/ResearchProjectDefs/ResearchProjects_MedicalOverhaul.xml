@@ -5,7 +5,6 @@
     <defName>PassiveMachine</defName>
     <label>Passive Machines</label>
     <description>Research into passive machines that provide medical care without electricity.</description>
-    <descriptionDiscovered>The requirement for medical IV's and other passive machines.</descriptionDiscovered>
     <baseCost>750</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -21,7 +20,6 @@
     <defName>PoweredMedicalMachine</defName>
     <label>Powered Machines</label>
     <description>Research into powered machines that provide medical care by requiring a constant electricity draw.</description>
-    <descriptionDiscovered>The requirement for life-support and other passive machines.</descriptionDiscovered>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -37,7 +35,6 @@
     <defName>DrugEnhancements</defName>
     <label>Drug Enhancements</label>
     <description>Prerequisite for making already useful drugs more useful-er...</description>
-    <descriptionDiscovered>Prerequisite for making already useful drugs more useful-er....</descriptionDiscovered>
     <baseCost>1500</baseCost>
     <techLevel>Spacer</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -50,7 +47,6 @@
     <defName>BloodStemMK2</defName>
     <label>Bloodstem Infusion</label>
     <description>Using mechanites, enzymes and some good ol' bloodstem you think you can create raw, synthesised blood.</description>
-    <descriptionDiscovered>Using mechanites, enzymes and some good ol' bloodstem you've managed to create raw, synthesised blood.</descriptionDiscovered>
     <baseCost>1500</baseCost>
     <techLevel>Spacer</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -66,7 +62,6 @@
     <defName>PanpsychanMK2</defName>
     <label>Panscyhan Enhancement</label>
     <description>The enhancement of panpsychan to treat more overdoses and disable the effects of more, harder drugs.</description>
-    <descriptionDiscovered>The enhancement of panpsychan to treat more overdoses and disable the effects of more, harder drugs.</descriptionDiscovered>
     <baseCost>1500</baseCost>
     <techLevel>Spacer</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -82,7 +77,6 @@
     <defName>NutritionIV</defName>
     <label>Nutrition IV</label>
     <description>A nutritional drip. For, y'know, nutrition. Place adjacent to a medical bed for highest effectiveness.</description>
-    <descriptionDiscovered>By shoving food inside of a bag and letting it slowly drip into someone's body you've managed to make your first IV Drip.</descriptionDiscovered>
     <baseCost>500</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -98,7 +92,6 @@
     <defName>PainkillerIV</defName>
     <label>Painkiller IV</label>
     <description>A painkiller drip. Kills pain. Place adjacent to a medical bed for highest effectiveness.</description>
-    <descriptionDiscovered>Having learned from your nutritional IV research you begin to experiment more with drips in general and have created a painkiller IV</descriptionDiscovered>
     <baseCost>750</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -114,7 +107,6 @@
     <defName>AntibioticIV</defName>
     <label>Antibiotic IV</label>
     <description>An anitbiotic drip used to speed up illness recovery. Place adjacent to a medical bed for highest effectiveness.</description>
-    <descriptionDiscovered>Pushing antiobitics straight into the blood stream is very effective, hence why you made an antibiotic IV.</descriptionDiscovered>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -130,7 +122,6 @@
     <defName>BloodIV</defName>
     <label>Blood IV</label>
     <description>A drip for realtime blood transfusions. Slows down the rate a colonist bleeds out. Place adjacent to a medical bed for highest effectiveness.</description>
-    <descriptionDiscovered>You've come to discover a variant of blood which anyone's body accepts. You've learned to use it for universal blood transfusions - in real time.</descriptionDiscovered>
     <baseCost>1500</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -146,7 +137,6 @@
     <defName>MedicalInjections</defName>
     <label>Medical Injections</label>
     <description>Prerequisite needed for medical injections e.g Morphine and Epinephrine.</description>
-    <descriptionDiscovered>You've realised that you can squeeze important liquids into an even smaller area than small plastic bags.</descriptionDiscovered>
     <baseCost>1000</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -162,7 +152,6 @@
     <defName>MorphineInjection</defName>
     <label>Morphine Autoinjector</label>
     <description>In-the-field morphine injection - yummy.</description>
-    <descriptionDiscovered>In-the-field morphine injection - yummy.</descriptionDiscovered>
     <baseCost>750</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -178,7 +167,6 @@
     <defName>EpiInjection</defName>
     <label>Epinephrine Autoinjector</label>
     <description>An EpiPen. Shoots adrenaline straight into a person's veins and gives them a temporary consciousness boost.</description>
-    <descriptionDiscovered>An EpiPen. Shoots adrenaline straight into a person's veins and gives them a temporary consciousness boost.</descriptionDiscovered>
     <baseCost>750</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -194,7 +182,6 @@
     <defName>InjectBlood</defName>
     <label>Injectable Coagulant</label>
     <description>A medical grade blood thickener used to temporarily coagulate blood and ultimately slow bleeding.</description>
-    <descriptionDiscovered>A medical grade blood thickener used to temporarily coagulate blood and ultimately slow bleeding.</descriptionDiscovered>
     <baseCost>1250</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -211,7 +198,6 @@
     <defName>LifeSupport</defName>
     <label>Life Support Machines</label>
     <description>Prerequisite into large machines used to treat life threatening issues and keep severely ill colonist's stable.</description>
-    <descriptionDiscovered>Prerequisite into large machines used to treat life threatening issues and keep severely ill colonist's stable.</descriptionDiscovered>
     <baseCost>2500</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -227,7 +213,6 @@
     <defName>Ventilator</defName>
     <label>Mechanical Ventilator</label>
     <description>An intrusive, mechanical machine that acts as a colonist's lungs by 'breathing' for them.</description>
-    <descriptionDiscovered>An intrusive, mechanical machine that acts as a colonist's lungs by 'breathing' for them.</descriptionDiscovered>
     <baseCost>1500</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -243,7 +228,6 @@
     <defName>Dialysis</defName>
     <label>Dialysis Machine</label>
     <description>A large, expensive machine that replaces a colonist's kidney and liver function and filters the blood.</description>
-    <descriptionDiscovered>A large, expensive machine that replaces a colonist's kidney and liver function and filters the blood.</descriptionDiscovered>
     <baseCost>1500</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -259,7 +243,6 @@
     <defName>Bypass</defName>
     <label>Heart/Lung Bypass</label>
     <description>Life support machine that bypasses the need for lungs and a heart. Very expensive, intrusive but also effective.</description>
-    <descriptionDiscovered>Life support machine that bypasses the need for lungs and a heart. Very expensive, intrusive but also effective.</descriptionDiscovered>
     <baseCost>2500</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -275,7 +258,6 @@
     <defName>RadioTherapy</defName>
     <label>Radiotherapy Machine [[WIP]]</label>
     <description>[[WIP]]</description>
-    <descriptionDiscovered>[[WIP]]</descriptionDiscovered>
     <baseCost>2500</baseCost>
     <techLevel>Industrial</techLevel>
     <tab>MedicalOverhaul</tab>
@@ -291,7 +273,6 @@
     <defName>LuciferiumMachine</defName>
     <label>Mechanite Suffuser [[WIP]]</label>
     <description>[[WIP]]</description>
-    <descriptionDiscovered>[[WIP]]</descriptionDiscovered>
     <baseCost>3500</baseCost>
     <techLevel>Spacer</techLevel>
     <tab>MedicalOverhaul</tab>

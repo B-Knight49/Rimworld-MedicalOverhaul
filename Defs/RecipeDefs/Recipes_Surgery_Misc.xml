@@ -34,6 +34,33 @@
 	  <description>Draw blood from pawn.</description>
       <jobString>Drawing blood...</jobString>
    </RecipeDef>
+   
+   <RecipeDef ParentName="SurgeryFlesh">
+		<defName>StomachRecoverySurgery</defName>
+	    <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
+        <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+		<recipeUsers>
+         <li>Human</li>
+        </recipeUsers>
+		<workerClass>IV.Recipe_Stomach</workerClass>
+		<workAmount>0</workAmount>
+		<targetsBodyPart>false</targetsBodyPart>
+		<ingredients>
+         <li>
+           <filter>
+              <categories>
+                 <li>Medicine</li>
+              </categories>
+           </filter>
+           <count>1</count>
+         </li>
+      </ingredients>
+      <fixedIngredientFilter>
+         <categories>
+            <li>Medicine</li>
+         </categories>
+      </fixedIngredientFilter>
+	</RecipeDef>
 	
 	<RecipeDef Name="SiliconeScars" ParentName="SurgeryFlesh" Abstract="True">
       <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
