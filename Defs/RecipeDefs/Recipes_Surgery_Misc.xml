@@ -37,6 +37,7 @@
    
    <RecipeDef ParentName="SurgeryFlesh">
 		<defName>StomachRecoverySurgery</defName>
+		<label>Stomach Recovery Surgery</label>
 	    <surgerySuccessChanceFactor>1.0</surgerySuccessChanceFactor>
         <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
 		<recipeUsers>

@@ -410,4 +410,16 @@
 		</stages>
 	</HediffDef>
 	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_StomachHalved</defName>
+		<defaultLabelColor>(0.5, 0, 0)</defaultLabelColor>
+		<label>Stomach Damaged</label>
+		<initialSeverity>1</initialSeverity>
+		<stages>
+		  <li>
+			<partEfficiencyOffset>-0.5</partEfficiencyOffset>
+		  </li>
+		</stages>
+	</HediffDef>
+	
 </Defs>
