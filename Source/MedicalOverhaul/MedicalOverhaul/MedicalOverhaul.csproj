@@ -48,6 +48,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ingestion\IngestionOutcomeDoer_Methadone.cs" />
     <Compile Include="Recipes\Recipe_Stomach.cs" />
     <Compile Include="Unique\Apparel_Splint.cs" />
     <Compile Include="Machines\Bypass.cs" />

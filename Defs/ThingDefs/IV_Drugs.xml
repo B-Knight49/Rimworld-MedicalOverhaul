@@ -337,5 +337,81 @@
 		  </li>
 		</comps>
 	</ThingDef>
+	
+	<ThingDef ParentName="MakeableDrugPillBase">
+		<defName>Methadone</defName>
+		<label>Methadone</label>
+		<description>Replacement medication for hard drug users. Reduces the user's dependency on a drug to remove their addictions.</description>
+		<graphicData>
+		  <texPath>Things/Item/Drugs/IV_Methadone</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<socialPropernessMatters>false</socialPropernessMatters>
+		<rotatable>false</rotatable>
+		<statBases>
+		  <WorkToMake>500</WorkToMake>
+		  <MarketValue>32</MarketValue>
+		  <Mass>0.005</Mass>
+		</statBases>
+		<techLevel>Industrial</techLevel>
+		<ingestible>
+		  <drugCategory>Medical</drugCategory>
+		  <outcomeDoers>
+			<li Class="IngestionOutcomeDoer_GiveHediff">
+			  <hediffDef>MethadoneHediff</hediffDef>
+			  <severity>0.2</severity>
+			</li>
+			<li Class="IV.IngestionOutcomeDoer_Methadone">
+			</li>
+		  </outcomeDoers>
+		</ingestible>
+		<recipeMaker>
+			<researchPrerequisite>PenoxycylineProduction</researchPrerequisite>
+		  <recipeUsers>
+			<li>DrugLab</li>
+		  </recipeUsers>
+		</recipeMaker>
+		<costList>
+		  <Neutroamine>2</Neutroamine>
+		</costList>
+		<comps>
+		  <li Class="CompProperties_Drug">
+			<chemical>GoJuice</chemical>
+			<addictiveness>0</addictiveness>
+			<minToleranceToAddict>99</minToleranceToAddict>
+			<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+			<needLevelOffset>1</needLevelOffset>
+			<overdoseSeverityOffset>
+			  <min>0.12</min>
+			  <max>0.23</max>
+			</overdoseSeverityOffset>
+			<listOrder>30</listOrder>
+		  </li>
+		  <li Class="CompProperties_Drug">
+			<chemical>Psychite</chemical>
+			<addictiveness>0</addictiveness>
+			<minToleranceToAddict>99</minToleranceToAddict>
+			<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+			<needLevelOffset>1</needLevelOffset>
+			<overdoseSeverityOffset>
+			  <min>0.12</min>
+			  <max>0.23</max>
+			</overdoseSeverityOffset>
+			<listOrder>30</listOrder>
+		  </li>
+		  <li Class="CompProperties_Drug">
+			<chemical>WakeUp</chemical>
+			<addictiveness>0</addictiveness>
+			<minToleranceToAddict>99</minToleranceToAddict>
+			<existingAddictionSeverityOffset>0.1</existingAddictionSeverityOffset>
+			<needLevelOffset>1</needLevelOffset>
+			<overdoseSeverityOffset>
+			  <min>0.12</min>
+			  <max>0.23</max>
+			</overdoseSeverityOffset>
+			<listOrder>30</listOrder>
+		  </li>
+		</comps>
+	</ThingDef>
   
 </Defs>
