@@ -18,6 +18,7 @@ namespace IV
     {
         public BodyPartRecord stomach = null;
         public HediffDef stomachHalf = HediffDef.Named("IV_StomachHalved");
+        public HediffDef infection = HediffDef.Named("WoundInfection");
 
         public override void ApplyOnPawn(Pawn pawn, BodyPartRecord part, Pawn billDoer, List<Thing> ingredients, Bill bill)
         {
@@ -60,6 +61,7 @@ namespace IV
                 {
                     pawn.health.RestorePart(stomach);
                     pawn.health.AddHediff(stomachHalf, stomach);
+                    pawn.health.AddHediff(infection, stomach);
                 }
                 Log.Warning("BodyPartRecord Stomach = NULL!");
             }
