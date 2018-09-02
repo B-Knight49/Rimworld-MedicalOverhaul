@@ -48,6 +48,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Hediffs\HediffCompProperties_CancerSpread.cs" />
+    <Compile Include="Hediffs\HediffComp_CancerSpread.cs" />
     <Compile Include="Ingestion\IngestionOutcomeDoer_Methadone.cs" />
     <Compile Include="Recipes\Recipe_Stomach.cs" />
     <Compile Include="Unique\Apparel_Splint.cs" />

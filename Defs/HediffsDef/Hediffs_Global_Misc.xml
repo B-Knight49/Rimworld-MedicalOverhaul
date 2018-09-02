@@ -422,4 +422,45 @@
 		</stages>
 	</HediffDef>
 	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_Cancer</defName>
+		<defaultLabelColor>(0.5, 0.1, 0.1)</defaultLabelColor>
+		<label>Cancer</label>
+		<initialSeverity>0.0066</initialSeverity>
+		<maxSeverity>1</maxSeverity>
+		<comps>
+		  <li Class="IV.HediffCompProperties_CancerSpread">
+		  <!-- This will take 45 days to spread // 0.3 severity -->
+			<severityPerDay>0.0066</severityPerDay>
+		  </li>
+		</comps>
+		<stages>
+		  <li>
+			<!-- 0 days -->
+			<minSeverity>0.0066</minSeverity>
+			<partEfficiencyOffset>-0.15</partEfficiencyOffset>
+		  </li>
+		  <li>
+			<!-- 30 days -->
+			<minSeverity>0.2</minSeverity>
+			<partEfficiencyOffset>-0.3</partEfficiencyOffset>
+		  </li>
+		  <li>
+			<!-- 75 days -->
+		    <minSeverity>0.5</minSeverity>
+			<partEfficiencyOffset>-0.5</partEfficiencyOffset>
+		  </li>
+		  <li>
+			<!-- 106 days -->
+		    <minSeverity>0.7</minSeverity>
+			<partEfficiencyOffset>-0.75</partEfficiencyOffset>
+		  </li>
+		  <li>
+			<!-- 151 days -->
+		    <minSeverity>0.9</minSeverity>
+			<deathMtbDays>0.01</deathMtbDays>
+		  </li>
+		</stages>
+	</HediffDef>
+	
 </Defs>
