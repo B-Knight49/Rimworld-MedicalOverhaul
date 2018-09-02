@@ -18,6 +18,7 @@ namespace IV
     {
 
         public Hediff Cancer = null;
+
         protected const int SeverityUpdateInterval = 200;
 
         public HediffCompProperties_CancerSpread Props
@@ -25,6 +26,26 @@ namespace IV
             get
             {
                 return (HediffCompProperties_CancerSpread)base.props;
+            }
+        }
+
+        public override void CompPostMake()
+        {
+            base.CompPostMake();
+            bool hasCancer = false;
+
+            List<Hediff> Hediffs = base.Pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
+            foreach (Hediff hediff in Hediffs)
+            {
+                if (hediff.ToString().Contains("IV_Cancer"))
+                {
+                    hasCancer = true;
+                }
+            }
+
+            if (hasCancer == false)
+            {
+                TrySendLetterPostMake();
             }
         }
 
@@ -202,6 +223,20 @@ namespace IV
             string label = "Cancer Spread";
             string text = base.Pawn.Label.CapitalizeFirst();
             text = text + "'s cancer has spread to their " + part;
+            text = text.AdjustedFor(base.Pawn, "PAWN");
+            Find.LetterStack.ReceiveLetter(label, text, LetterDefOf.NegativeEvent, base.Pawn, null, null);
+            return true;
+        }
+
+        protected bool TrySendLetterPostMake()
+        {
+            if (!PawnUtility.ShouldSendNotificationAbout(base.Pawn))
+            {
+                return false;
+            }
+            string label = "Cancer";
+            string text = base.Pawn.Label.CapitalizeFirst();
+            text = text + " has cancer...";
             text = text.AdjustedFor(base.Pawn, "PAWN");
             Find.LetterStack.ReceiveLetter(label, text, LetterDefOf.NegativeEvent, base.Pawn, null, null);
             return true;
