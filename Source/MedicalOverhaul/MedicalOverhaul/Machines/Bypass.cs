@@ -20,6 +20,7 @@ namespace IV
         public static HediffDef IV_Bypass = HediffDef.Named("IV_Bypass");
         public static ThoughtDef BypassThought = ThoughtDef.Named("BypassThought");
         private CompPowerTrader powerComp = null;
+        private CompFlickable flickableComp = null;
 
         public Building_Bypass()
             : base()
@@ -32,6 +33,7 @@ namespace IV
         {
             base.SpawnSetup(map, respawningAfterLoad);
             powerComp = base.GetComp<CompPowerTrader>();
+            flickableComp = base.GetComp<CompFlickable>();
         }
 
         // Begin ticking 
@@ -41,7 +43,7 @@ namespace IV
             {
                 base.Tick();
 
-                if (powerComp.PowerOn)
+                if (powerComp.PowerOn && flickableComp.SwitchIsOn)
                 {
                     CheckPawnHealth();
                 }

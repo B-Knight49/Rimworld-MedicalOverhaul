@@ -19,6 +19,7 @@ namespace IV
         public static HediffDef IV_Filter = HediffDef.Named("IV_Filter");
         public static ThoughtDef DialysisThought = ThoughtDef.Named("DialysisThought");
         private CompPowerTrader powerComp = null;
+        private CompFlickable flickableComp = null;
 
         public Building_Filter()
             : base()
@@ -31,6 +32,7 @@ namespace IV
         {
             base.SpawnSetup(map, respawningAfterLoad);
             powerComp = base.GetComp<CompPowerTrader>();
+            flickableComp = base.GetComp<CompFlickable>();
         }
 
         // Begin ticking 
@@ -40,7 +42,7 @@ namespace IV
             {
                 base.Tick();
 
-                if (powerComp.PowerOn)
+                if (powerComp.PowerOn && flickableComp.SwitchIsOn)
                 {
                     CheckPawnHealth();
                 }

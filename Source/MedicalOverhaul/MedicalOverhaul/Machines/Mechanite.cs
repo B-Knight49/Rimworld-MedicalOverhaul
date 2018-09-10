@@ -20,6 +20,7 @@ namespace IV
         public static HediffDef IV_Mechanite = HediffDef.Named("IV_Mechanite");
         public static HediffDef IV_Mechanite2 = HediffDef.Named("IV_Mechanite2");
         private CompRefuelable refuelComp = null;
+        private CompFlickable flickableComp = null;
 
         public Building_Mechanite()
             : base()
@@ -32,6 +33,7 @@ namespace IV
         {
             base.SpawnSetup(map, respawningAfterLoad);
             refuelComp = base.GetComp<CompRefuelable>();
+            flickableComp = base.GetComp<CompFlickable>();
         }
 
         // Begin ticking 
@@ -41,7 +43,7 @@ namespace IV
             {
                 base.Tick();
 
-                if (refuelComp.HasFuel == true)
+                if (refuelComp.HasFuel && flickableComp.SwitchIsOn)
                 {
                     CheckPawnHealth();
                 }

@@ -48,17 +48,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Hediffs\HediffCompProperties_CancerSpread.cs" />
-    <Compile Include="Hediffs\HediffComp_CancerSpread.cs" />
+    <Compile Include="HediffCompProperties\HediffCompProperties_CancerSpread.cs" />
+    <Compile Include="HediffComps\HediffComp_CancerSpread.cs" />
     <Compile Include="Ingestion\IngestionOutcomeDoer_Methadone.cs" />
+    <Compile Include="Machines\IV_Chemo.cs" />
     <Compile Include="Recipes\Recipe_Stomach.cs" />
+    <Compile Include="Unique\Alert_Chemotherapy.cs" />
     <Compile Include="Unique\Apparel_Splint.cs" />
     <Compile Include="Machines\Bypass.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_Panpsychan.cs" />
-    <Compile Include="Hediffs\HediffComp_HediffChanger.cs" />
+    <Compile Include="HediffCompProperties\HediffCompProperties_Panpsychan.cs" />
+    <Compile Include="HediffComps\HediffComp_HediffChanger.cs" />
     <Compile Include="Machines\Filter.cs" />
-    <Compile Include="Hediffs\HediffCompProperties_HediffChanger.cs" />
-    <Compile Include="Hediffs\HediffComp_Panpsychan.cs" />
+    <Compile Include="HediffCompProperties\HediffCompProperties_HediffChanger.cs" />
+    <Compile Include="HediffComps\HediffComp_Panpsychan.cs" />
     <Compile Include="Ingestion\IngestionOutcomeDoer_MilkThistle.cs" />
     <Compile Include="Ingestion\IngestionOutcomeDoer_SuperAntibiotics.cs" />
     <Compile Include="Machines\IV_Antibiotics.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="Recipes\Recipe_DrawBlood.cs" />
     <Compile Include="Machines\Ventillator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unique\HasCancer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+
   <Operation Class="PatchOperationAdd">
     <xpath>*/RecipeDef[@Name="SurgeryFlesh"]</xpath>
     <value>
@@ -14,4 +15,11 @@
 		</fixedIngredientFilter>
     </value>
   </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>*/ThingDef[defName="Human"]/recipes//li[25]</xpath>
+    <value>
+    </value>
+  </Operation>
+  
 </Patch>

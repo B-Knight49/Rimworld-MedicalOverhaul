@@ -113,4 +113,30 @@
 		</plant>
 	</ThingDef>
 	
+	<ThingDef ParentName="DeciduousTreeBase">
+		<defName>CancerTree</defName>
+		<label>Happy Tree</label>
+		<description>A small, leafy tree whose bark and leaves contains an agent that's used in chemotherapy.</description>
+		<statBases>
+			<MaxHitPoints>85</MaxHitPoints>
+			<Beauty>2</Beauty>
+		</statBases>
+		<graphicData>
+			<texPath>Things/Plants/IV_CancerTree</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shadowData>
+			<volume>(0.2, 0.35, 0.13)</volume>
+			<offset>(-0.03,0,-0.44)</offset>
+		  </shadowData>
+		</graphicData>
+		<plant>
+		  <growDays>30</growDays>
+		  <leaflessGraphicPath>Things/Plants/IV_TreeLeafless</leaflessGraphicPath>
+		  <harvestWork>1000</harvestWork>
+		  <harvestedThingDef>AntiCancerAgent</harvestedThingDef>
+		  <harvestYield>1</harvestYield>
+		  <wildClusterWeight>35</wildClusterWeight>
+		</plant>
+	</ThingDef>
+	
 </Defs>

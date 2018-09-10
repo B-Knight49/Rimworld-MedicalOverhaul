@@ -92,5 +92,29 @@
 		</stages>
 	</HediffDef>
 	
+	<HediffDef ParentName="DiseaseBase">
+		<defName>IV_Chemo</defName>
+		<defaultLabelColor>(0.5, 0.5, 1)</defaultLabelColor>
+		<label>Intravenous Therapy (Chemotherapy)</label>
+		<maxSeverity>0.01</maxSeverity>
+		<comps>
+		  <li Class="HediffCompProperties_Disappears">
+			<disappearsAfterTicks>
+			  <min>62</min>
+			  <max>62</max>
+			</disappearsAfterTicks>
+		  </li>
+		</comps>
+		<stages>
+		  <li>
+			<capMods>
+			  <li>
+				<capacity>Consciousness</capacity>
+				<setMax>0.1</setMax>
+			  </li>
+			</capMods>
+		  </li>
+		</stages>
+	</HediffDef>
 
 </Defs>

@@ -20,6 +20,7 @@ namespace IV
 
         public static HediffDef IV_BloodTransfusion = HediffDef.Named("IV_BloodTransfusion");
         private CompRefuelable refuelComp = null;
+        private CompFlickable flickableComp = null;
 
         public Building_BloodMachine()
             : base()
@@ -32,6 +33,7 @@ namespace IV
         {
             base.SpawnSetup(map, respawningAfterLoad);
             refuelComp = base.GetComp<CompRefuelable>();
+            flickableComp = base.GetComp<CompFlickable>();
         }
 
         // Repeat code every Tick (might change it to TickRare at some point)
@@ -42,7 +44,7 @@ namespace IV
             {
                 base.Tick();
 
-                if (refuelComp.HasFuel)
+                if (refuelComp.HasFuel && flickableComp.SwitchIsOn)
                 {
                     ApplyIV();
                 }

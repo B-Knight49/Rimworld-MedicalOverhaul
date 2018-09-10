@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>*/HediffDef[defName="Carcinoma"]/label</xpath>
+    <value>
+		<label>tumour</label>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>*/HediffDef[defName="Carcinoma"]/labelNoun</xpath>
+    <value>
+		<labelNoun>a tumour</labelNoun>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>*/HediffDef[defName="Carcinoma"]/comps/li/baseTendDurationHours</xpath>
+    <value>
+		<baseTendDurationHours>9999</baseTendDurationHours>
+    </value>
+  </Operation>
+  
+  <Operation Class="PatchOperationReplace">
+    <xpath>*/HediffDef[defName="Carcinoma"]/comps/li/severityPerDayTended</xpath>
+    <value>
+		<severityPerDayTended>0</severityPerDayTended>
+    </value>
+  </Operation>
+  
+</Patch>
+

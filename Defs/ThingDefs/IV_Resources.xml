@@ -152,4 +152,24 @@
     </thingSetMakerTags>
   </ThingDef>
   
+  <ThingDef ParentName="ResourceBase">
+    <defName>AntiCancerAgent</defName>
+    <label>Anti-Cancer Agent</label>
+    <description>Extract from the "Happy Tree". Used as a fuel for Chemotherapy drips.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/IV_ACA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <MarketValue>6000</MarketValue>
+      <Mass>0.026</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+    <thingCategories>
+      <li>Medicine</li>
+    </thingCategories>
+  </ThingDef>
+  
 </Defs>
