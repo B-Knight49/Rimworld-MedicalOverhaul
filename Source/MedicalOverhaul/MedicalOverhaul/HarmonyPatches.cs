@@ -242,11 +242,12 @@ static class LimbEfficiency
     {
         Pawn partOwner = diffSet.pawn;
         List<Hediff> Hediffs             = partOwner.health.hediffSet.GetHediffs<Hediff>().ToList();
-        var partList                     = new List<string> { "LeftClavicle", "RightClavicle", "Sternum", "LeftHumerus", "RightHumerus", "LeftRadius", "RightRadius", "Pelvis", "LeftFemur", "RightFemur", "LeftTibia", "RightTibia" };
-        var movingParts                  = new List<string> { "Sternum", "Pelvis", "LeftFemur", "RightFemur","LeftTibia","RightTibia"};
-        var manipulationParts            = new List<string> { "LeftClavicle", "RightClavicle", "LeftHumerus", "RightHumerus", "LeftRadius", "RightRadius"};
+        var partList                     = new List<string> { "leftclavicle", "rightclavicle", "sternum", "lefthumerus", "righthumerus", "leftradius", "rightradius", "pelvis", "leftfemur", "rightfemur", "lefttibia", "righttibia" };
+        var movingParts                  = new List<string> { "sternum", "pelvis", "leftfemur", "rightfemur","lefttibia","righttibia"};
+        var manipulationParts            = new List<string> { "leftclavicle", "rightclavicle", "lefthumerus", "righthumerus", "leftradius", "rightradius"};
         List<BodyPartRecord> brokenParts = new List<BodyPartRecord>();
-        string partString                = part.def.ToString();
+        string partString                = part.Label.ToString();
+        partString                       = partString.Replace(" ", "");
 
         foreach (Hediff hediff in Hediffs)
         {
