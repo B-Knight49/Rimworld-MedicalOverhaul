@@ -38,5 +38,27 @@ namespace IV
             }
            
         }
+
+        public static bool CheckForCancer(Pawn pawn)
+        {
+            if (pawn != null)
+            {
+                List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
+                foreach (Hediff hediff in Hediffs)
+                {
+                    var StrHediff = hediff.ToString();
+                    if (StrHediff.Contains("IV_Cancer"))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+            else
+            {
+                Log.Error("Pawn is NULL!");
+                return false;
+            }
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace IV
         public HediffDef diffLegs = HediffDef.Named("IV_Splint1");
         public HediffDef diffArms = HediffDef.Named("IV_Splint2");
 
-        public override void ExposeData()
+        public Apparel_Splint()
         {
             List<Hediff> Hediffs = base.Wearer.health.hediffSet.GetHediffs<Hediff>().ToList();
             List<BodyPartRecord> brokenBones = new List<BodyPartRecord>();

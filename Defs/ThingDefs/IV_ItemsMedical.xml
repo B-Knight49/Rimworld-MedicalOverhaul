@@ -170,10 +170,9 @@
       </recipeUsers>
     </recipeMaker>
     <costList>
-	  <CrushedStem>4</CrushedStem>
-      <Neutroamine>2</Neutroamine>
+	  <Painkillers>4</Painkillers>
 	  <Steel>1</Steel>
-	  <ComponentIndustrial>2</ComponentIndustrial>
+	  <ComponentIndustrial>1</ComponentIndustrial>
     </costList>
     <comps>
       <li Class="CompProperties_Drug">
@@ -296,7 +295,7 @@
       </recipeUsers>
     </recipeMaker>
     <costList>
-	  <CrushedStem>4</CrushedStem>
+	  <Painkillers>2</Painkillers>
       <Neutroamine>2</Neutroamine>
 	  <Steel>1</Steel>
 	  <ComponentIndustrial>2</ComponentIndustrial>
@@ -347,8 +346,7 @@
       </recipeUsers>
     </recipeMaker>
     <costList>
-	  <CrushedStem>4</CrushedStem>
-      <Neutroamine>2</Neutroamine>
+      <Neutroamine>1</Neutroamine>
 	  <Steel>1</Steel>
 	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>

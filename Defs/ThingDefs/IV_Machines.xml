@@ -37,9 +37,10 @@
     <description>An invasive life support device that forces air into the patient's lungs. To be used when pawn's breathing stat is at 0%.</description>
     <size>(1,1)</size>
     <costList>
-      <Steel>200</Steel>
+      <Steel>250</Steel>
 	  <Plasteel>15</Plasteel>
 	  <Silver>10</Silver>
+	  <ComponentIndustrial>5</ComponentIndustrial>
     </costList>
 	<thingCategories>
       <li>BuildingsMisc</li>
@@ -107,9 +108,10 @@
     <description>Life support machine that replaces kidney and liver function by filtering the bloodstream.</description>
     <size>(1,1)</size>
     <costList>
-      <Steel>200</Steel>
+      <Steel>250</Steel>
 	  <Plasteel>15</Plasteel>
 	  <Silver>10</Silver>
+	  <ComponentIndustrial>5</ComponentIndustrial>
     </costList>
 	<thingCategories>
       <li>BuildingsMisc</li>
@@ -177,9 +179,10 @@
     <description>A life support machine that skips the heart and lungs, replacing the functionality of both. An expensive version of the Mechanical Ventilator with more features and less of a mood penalty.</description>
     <size>(1,1)</size>
     <costList>
-      <Steel>200</Steel>
-	  <Plasteel>15</Plasteel>
-	  <Silver>10</Silver>
+      <Steel>300</Steel>
+	  <Plasteel>20</Plasteel>
+	  <Silver>15</Silver>
+	  <ComponentIndustrial>5</ComponentIndustrial>
     </costList>
 	<thingCategories>
       <li>BuildingsMisc</li>
@@ -247,9 +250,9 @@
     <description>Cuts the rate at which a pawn bleeds out by 75%. Also provides a 5% and 10% boost in medical tend quality and surgery success chance when placed adjacent to a hospital bed. Can buy you valuable time whilst preparing for treatment.</description>
     <size>(1,1)</size>
     <costList>
-      <Steel>200</Steel>
-	  <Plasteel>15</Plasteel>
-	  <Silver>10</Silver>
+      <Steel>150</Steel>
+	  <Silver>5</Silver>
+	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
 	<thingCategories>
       <li>BuildingsMisc</li>
@@ -327,8 +330,8 @@
     <size>(1,1)</size>
     <costList>
       <Steel>100</Steel>
-	  <Plasteel>5</Plasteel>
 	  <Silver>5</Silver>
+	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
 	<thingCategories>
       <li>BuildingsMisc</li>
@@ -404,9 +407,9 @@
     <description>Reduces the amount of pain a colonist experiences by 100%. Also provides a 5% and 10% boost in medical tend quality and surgery success chance when placed adjacent to a hospital bed.</description>
     <size>(1,1)</size>
     <costList>
-      <Steel>120</Steel>
-	  <Plasteel>5</Plasteel>
-	  <Silver>10</Silver>
+      <Steel>150</Steel>
+	  <Silver>5</Silver>
+	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
 	<thingCategories>
       <li>BuildingsMisc</li>
@@ -482,9 +485,9 @@
     <description>Improves a colonist's blood filtration stat and in turn speeds up the time it takes to become immune to an illness. Also provides a 5% and 10% boost in medical tend quality and surgery success chance when placed adjacent to a hospital bed.</description>
     <size>(1,1)</size>
     <costList>
-      <Steel>200</Steel>
-	  <Plasteel>15</Plasteel>
-	  <Silver>10</Silver>
+      <Steel>150</Steel>
+	  <Silver>5</Silver>
+	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
 	<thingCategories>
       <li>BuildingsMisc</li>
@@ -560,9 +563,10 @@
     <description>A dispenser of dormant antimechanites used in Glitterworld hospitals. When loaded into this device, antimechanites can be programmed to target existing mechanites in the patient's body thus removing mechanite illnesses and a luciferium addiction. Requires Antinites to function.</description>
     <size>(1,1)</size>
     <costList>
-      <Steel>200</Steel>
+      <Steel>500</Steel>
 	  <Plasteel>15</Plasteel>
-	  <Silver>10</Silver>
+	  <Silver>15</Silver>
+	  <ComponentSpacer>2</ComponentSpacer>
     </costList>
 	<thingCategories>
       <li>BuildingsMisc</li>
@@ -638,9 +642,9 @@
     <description>Chemicals delivered intravenously to help battle and suppress cancer. Possibly the most famous forms of cancer treatment.</description>
     <size>(1,1)</size>
     <costList>
-      <Steel>200</Steel>
-	  <Plasteel>15</Plasteel>
+      <Steel>250</Steel>
 	  <Silver>10</Silver>
+	  <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
 	<thingCategories>
       <li>BuildingsMisc</li>

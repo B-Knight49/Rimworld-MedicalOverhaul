@@ -70,6 +70,7 @@ class Main
         MethodInfo limb_targetmethod = AccessTools.Method(typeof(PawnCapacityUtility), "CalculatePartEfficiency");
         HarmonyMethod limb_postfix = new HarmonyMethod(typeof(LimbEfficiency).GetMethod("Patch_Postfix"));
         harmony.Patch(limb_targetmethod, null, limb_postfix);
+
     }
 }
 
@@ -237,6 +238,7 @@ static class LimbEfficiency
 {
     public static HediffDef BrokenBone1 = HediffDef.Named("IV_BrokenBone1");
     public static HediffDef BrokenBone2 = HediffDef.Named("IV_BrokenBone2");
+    public static HediffDef BrokenBone3 = HediffDef.Named("IV_BrokenBone3");
 
     public static void Patch_Postfix(BodyPartRecord part, float __result, HediffSet diffSet)
     {
@@ -244,7 +246,7 @@ static class LimbEfficiency
         List<Hediff> Hediffs             = partOwner.health.hediffSet.GetHediffs<Hediff>().ToList();
         var partList                     = new List<string> { "leftclavicle", "rightclavicle", "sternum", "lefthumerus", "righthumerus", "leftradius", "rightradius", "pelvis", "leftfemur", "rightfemur", "lefttibia", "righttibia" };
         var movingParts                  = new List<string> { "sternum", "pelvis", "leftfemur", "rightfemur","lefttibia","righttibia"};
-        var manipulationParts            = new List<string> { "leftclavicle", "rightclavicle", "lefthumerus", "righthumerus", "leftradius", "rightradius"};
+        var manipulationParts            = new List<string> { "leftclavicle", "rightclavicle", "lefthumerus", "righthumerus", "leftradius", "rightradius","ribcage"};
         List<BodyPartRecord> brokenParts = new List<BodyPartRecord>();
         string partString                = part.Label.ToString();
         partString                       = partString.Replace(" ", "");
@@ -265,11 +267,19 @@ static class LimbEfficiency
                 {
                     if (movingParts.Contains(partString))
                     {
+                        if (partString == "sternum")
+                        {
+                            partOwner.health.AddHediff(BrokenBone3, part);
+                        }
                         partOwner.health.AddHediff(BrokenBone1, part);
                         return;
                     }
                     if (manipulationParts.Contains(partString))
                     {
+                        if (partString == "ribcage")
+                        {
+                            partOwner.health.AddHediff(BrokenBone3, part);
+                        }
                         partOwner.health.AddHediff(BrokenBone2, part);
                         return;
                     }

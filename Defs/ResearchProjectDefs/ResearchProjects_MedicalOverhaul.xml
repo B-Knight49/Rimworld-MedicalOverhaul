@@ -53,7 +53,7 @@
     <researchViewX>9</researchViewX>
     <researchViewY>4.5</researchViewY>
     <prerequisites>
-      <li>PoweredMedicalMachine</li>
+      <li>DrugEnhancements</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
   </ResearchProjectDef>
@@ -68,7 +68,7 @@
     <researchViewX>9</researchViewX>
     <researchViewY>2.5</researchViewY>
     <prerequisites>
-      <li>PoweredMedicalMachine</li>
+      <li>DrugEnhancements</li>
     </prerequisites>
     <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
   </ResearchProjectDef>
@@ -172,6 +172,21 @@
     <tab>MedicalOverhaul</tab>
     <researchViewX>2</researchViewX>
     <researchViewY>5</researchViewY>
+    <prerequisites>
+      <li>MedicalInjections</li>
+    </prerequisites>
+    <requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+  </ResearchProjectDef>
+  
+  <ResearchProjectDef>
+    <defName>InsulinInjection</defName>
+    <label>Insulin Autoinjector</label>
+    <description>Insulin Injection. Vital piece of equipment for those who suffer from diabetes.</description>
+    <baseCost>750</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>MedicalOverhaul</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>4.5</researchViewY>
     <prerequisites>
       <li>MedicalInjections</li>
     </prerequisites>
