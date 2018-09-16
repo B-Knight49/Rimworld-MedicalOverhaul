@@ -120,9 +120,13 @@ static class GiverAndDoer
         else                                                                                    // If bill IS Injectable Coagulant OR Morphine OR Epinephrine then:
         {
             //Log.Message("[Case 2]" + "Patient: " + giver + "Surgeon: " + pawn);
+            Pawn giverPawn = giver as Pawn;
             if (pawn.ToString() != giver.ToString())                                            // If patient is NOT the same as surgeon then:
             {
-                return true;                                                                    // Do bill
+                if (giverPawn.Downed || giverPawn.Drafted || giverPawn.InBed() || giverPawn.IsPrisoner)
+                {
+                    return true;                                                                // Do bill
+                }
             }
             return false;
         }
