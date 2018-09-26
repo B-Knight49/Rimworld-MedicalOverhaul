@@ -17,8 +17,9 @@
   </Operation>
   
   <Operation Class="PatchOperationReplace">
-    <xpath>*/ThingDef[defName="Human"]/recipes//li[25]</xpath>
+    <xpath>*/RecipeDef[defName="ExciseCarcinoma"]/skillRequirements/Medicine</xpath>
     <value>
+		<Medicine>12</Medicine>
     </value>
   </Operation>
   
