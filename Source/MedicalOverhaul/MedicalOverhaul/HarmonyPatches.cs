@@ -41,10 +41,10 @@ class Main
         HarmonyMethod work_prefix = new HarmonyMethod(typeof(GiverAndDoer).GetMethod("Patch_Prefix"));
         harmony.Patch(work_targetmethod, work_prefix, null);
 
-        // Patch ToxicImmunityPatch
+        // Patch SeverityAdjustmentPatch
 
         MethodInfo toxic_targetmethod = AccessTools.Method(typeof(HealthUtility), "AdjustSeverity");
-        HarmonyMethod toxic_prefix = new HarmonyMethod(typeof(ToxicImmunityPatch).GetMethod("Patch_Prefix"));
+        HarmonyMethod toxic_prefix = new HarmonyMethod(typeof(ToxicPatch).GetMethod("Patch_Prefix"));
         harmony.Patch(toxic_targetmethod, toxic_prefix, null);
 
         // Patch BlockOpiateNeed
@@ -133,30 +133,33 @@ static class GiverAndDoer
     }
 }
 
-static class ToxicImmunityPatch
+static class ToxicPatch
 {
     public static bool Patch_Prefix(ref Pawn pawn, ref float sevOffset, ref HediffDef hdDef)
     {
         bool ConsumedTablets = false;
 
-        if (hdDef.ToString().Contains("ToxicBuildup"))
+        if (pawn.RaceProps.Humanlike)
         {
-            List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
-
-            foreach (Hediff hediff in Hediffs)
+            if (hdDef.ToString().Contains("ToxicBuildup"))
             {
-                var StrHediff = hediff.ToString();
-                if (StrHediff.Contains("NoToxic"))
+                List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
+
+                foreach (Hediff hediff in Hediffs)
                 {
-                    ConsumedTablets = true;
+                    var StrHediff = hediff.ToString();
+                    if (StrHediff.Contains("NoToxic"))
+                    {
+                        ConsumedTablets = true;
+                    }
                 }
-            }
 
-            if (ConsumedTablets == true)
-            {
-                sevOffset = sevOffset * 0.25f;
+                if (ConsumedTablets == true)
+                {
+                    sevOffset = sevOffset * 0.25f;
+                }
+                return true;
             }
-            return true;
         }
         return true;
     }
@@ -296,3 +299,4 @@ static class LimbEfficiency
         }
     }
 }
+

@@ -91,7 +91,7 @@ namespace IV
                 {
                     pawn.needs.mood.thoughts.memories.TryGainMemory(DialysisThought, null);
                 }
-                
+
 
                 // Stop the "Acute Liver Failure" or "Acute Kidney Failure" hediff from increasing
                 List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();

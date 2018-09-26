@@ -17,7 +17,8 @@ namespace IV
 {
     public class Building_Chemo : Building
     {
-        public static HediffDef IV_Chemo = HediffDef.Named("IV_Chemo");
+        public static HediffDef IV_Chemo    = HediffDef.Named("IV_Chemo");
+        public static HediffDef IV_ChemoBad = HediffDef.Named("IV_ChemoBad");
         private CompRefuelable refuelComp = null;
         private CompFlickable flickableComp = null;
 
@@ -74,6 +75,7 @@ namespace IV
         public void ApplyHediff(Building bed, Pawn pawn)
         {
             Hediff Cancer = null;
+            Hediff Hediff_ChemoBad = null;
 
             // Return the cancer hediff
             List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
@@ -85,13 +87,25 @@ namespace IV
                 {
                     Cancer = hediff;
                 }
+                if (StrHediff.Contains("IV_ChemoBad"))
+                {
+                    Hediff_ChemoBad = hediff;
+                }
             }
 
             if (bed != null && Cancer != null)
             {
-
                 pawn.health.AddHediff(IV_Chemo);
-                Cancer.Severity -= 0.00005f;
+                Cancer.Severity -= 0.000025f;
+
+                if (Hediff_ChemoBad != null)
+                {
+                    Hediff_ChemoBad.Severity += 0.0035f;
+                }
+                else
+                {
+                    pawn.health.AddHediff(IV_ChemoBad);
+                }
 
             }
             else

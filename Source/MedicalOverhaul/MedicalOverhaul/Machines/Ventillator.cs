@@ -90,7 +90,6 @@ namespace IV
 
                 if (!alreadyHas)
                 {
-                    Log.Message("Adding bad thought");
                     pawn.needs.mood.thoughts.memories.TryGainMemory(MechanicalThought, null);
                 }
 

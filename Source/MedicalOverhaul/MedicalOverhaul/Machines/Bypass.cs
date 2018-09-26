@@ -93,7 +93,7 @@ namespace IV
                 {
                     pawn.needs.mood.thoughts.memories.TryGainMemory(BypassThought, null);
                 }
-              
+
                 // Stop the "Oxygen Deprivation" or "No Heartbeat" hediff from increasing
                 List<Hediff> Hediffs = pawn.health.hediffSet.GetHediffs<Hediff>().ToList();
 
