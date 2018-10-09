@@ -259,7 +259,7 @@
   <ThingDef ParentName="IV_InjectBase">
     <defName>EpiSerum</defName>
     <label>Epinephrine Autoinjector</label>
-    <description>An injectable, single use syringe which sends adrenaline straight into the blood stream. Meant for field use only.</description>
+    <description>An injectable, single use syringe which delivers a lifesaving dose of adrenaline. Aim for the thigh and push.</description>
     <thingClass>Medicine</thingClass>
 	
 	<rotatable>false</rotatable>
