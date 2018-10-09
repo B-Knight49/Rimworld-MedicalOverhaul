@@ -308,7 +308,7 @@
 	<ThingDef ParentName="DrugPillBase">
 		<defName>MilkThistleExtract</defName>
 		<label>Milk Thistle Extract</label>
-		<description>Small seeds and petals extracted from a Milk Thistle flower used to help treat Cirrhosis.</description>
+		<description>Small seeds and petals extracted from a milk thistle flower used to help treat cirrhosis.</description>
 		<graphicData>
 		  <texPath>Things/Item/Drugs/MilkThistleExtract</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>
