@@ -314,7 +314,7 @@
   <ThingDef ParentName="IV_InjectBase">
     <defName>InsulinSerum</defName>
     <label>Insulin Injection</label>
-    <description>An injectable, single use syringe which sends insulin straight into the blood stream. Used to treat diabetes and keep its symptoms at bay.</description>
+    <description>An injectable, single use syringe which delivers a bolus of insulin subcutaneously. Used to treat high blood sugar in diabetics and keep its symptoms at bay.</description>
     <thingClass>Medicine</thingClass>
 	
 	<rotatable>false</rotatable>
