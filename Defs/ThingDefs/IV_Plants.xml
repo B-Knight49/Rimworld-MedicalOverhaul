@@ -42,7 +42,7 @@
 	<ThingDef ParentName="PlantBase">
 		<defName>IV_MilkThistle</defName>
 		<label>Milk Thistle Flower</label>
-		<description>A green plant with a purple flowery top. Extract can help with Cirrhosis of the liver.</description>
+		<description>A green plant with a purple flowery top. Extract can help with cirrhosis of the liver.</description>
 		<statBases>
 			<MaxHitPoints>85</MaxHitPoints>
 		</statBases>
@@ -81,7 +81,7 @@
 	<ThingDef ParentName="PlantBase">
 		<defName>PlantWildMilkThistle</defName>
 		<label>Wild Milk Thistle</label>
-		<description>A wild green plant with a purple flowery top. Extract can help with Cirrhosis of the liver.</description>
+		<description>A wild green plant with a purple flowery top. Extract can help with cirrhosis of the liver.</description>
 		<statBases>
 			<MaxHitPoints>85</MaxHitPoints>
 		</statBases>
