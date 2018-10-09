@@ -92,7 +92,7 @@
     <ThingDef ParentName="MakeableDrugPillBase">
 		<defName>Antibiotics</defName>
 		<label>Antibiotics</label>
-		<description>Pills that speed up recovery from an infection / increase the rate at which a pawn becomes immune from an infection.</description>
+		<description>Pills that speed up recovery from an infection / increase the rate at which a pawn becomes immune to an infection.</description>
 		<graphicData>
 		  <texPath>Things/Item/Drugs/Antibiotics</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>
