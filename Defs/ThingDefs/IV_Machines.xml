@@ -34,7 +34,7 @@
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
-    <description>An invasive life support device that forces air into the patient's lungs. To be used when pawn's breathing stat is at 0%.</description>
+    <description>An invasive life support device that forces air through a tube into the patient's lungs. To be used when one cannot breathe on their own.</description>
     <size>(1,1)</size>
     <costList>
       <Steel>250</Steel>
