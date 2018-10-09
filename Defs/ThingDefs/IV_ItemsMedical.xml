@@ -133,7 +133,7 @@
   <ThingDef ParentName="IV_InjectBase">
     <defName>MorphineSerum</defName>
     <label>Morphine Autoinjector</label>
-    <description>An injectable, single use syringe which sends morphine straight into the blood stream. Meant for field use only. Quite addictive.</description>
+    <description>An injectable, single use syringe which allows for rapid self-administration of morphine. Meant for field use only. A potent painkiller, but quite addictive.</description>
     <thingClass>Medicine</thingClass>
 	
 	<rotatable>false</rotatable>
