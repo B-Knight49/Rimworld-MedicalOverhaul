@@ -5,7 +5,7 @@
 	<ThingDef ParentName="MakeableDrugPillBase">
 		<defName>Antidepressants</defName>
 		<label>Antidepressants</label>
-		<description>Antidepressants. Pills used to boost mood that usually come with side effects/withdrawal symptoms - however NOT addictive.</description>
+		<description>Antidepressants. Pills used to boost mood that usually come with side effects/withdrawal symptoms - however, they are NOT addictive.</description>
 		<graphicData>
 		  <texPath>Things/Item/Drugs/Antidepressants</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>
