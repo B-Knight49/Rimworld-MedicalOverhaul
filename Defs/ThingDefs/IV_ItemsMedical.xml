@@ -133,7 +133,7 @@
   <ThingDef ParentName="IV_InjectBase">
     <defName>MorphineSerum</defName>
     <label>Morphine Autoinjector</label>
-    <description>An injectable, single use syringe which sends morphine straight into the blood stream. Meant for field use only. Quite addictive.</description>
+    <description>An injectable, single use syringe which allows for rapid self-administration of morphine. Meant for field use only. A potent painkiller, but quite addictive.</description>
     <thingClass>Medicine</thingClass>
 	
 	<rotatable>false</rotatable>
@@ -259,7 +259,7 @@
   <ThingDef ParentName="IV_InjectBase">
     <defName>EpiSerum</defName>
     <label>Epinephrine Autoinjector</label>
-    <description>An injectable, single use syringe which sends adrenaline straight into the blood stream. Meant for field use only.</description>
+    <description>An injectable, single use syringe which delivers a lifesaving dose of adrenaline. Aim for the thigh and push.</description>
     <thingClass>Medicine</thingClass>
 	
 	<rotatable>false</rotatable>
@@ -314,7 +314,7 @@
   <ThingDef ParentName="IV_InjectBase">
     <defName>InsulinSerum</defName>
     <label>Insulin Injection</label>
-    <description>An injectable, single use syringe which sends insulin straight into the blood stream. Used to treat diabetes and keep its symptoms at bay.</description>
+    <description>An injectable, single use syringe which delivers a bolus of insulin subcutaneously. Used to treat high blood sugar in diabetics and keep its symptoms at bay.</description>
     <thingClass>Medicine</thingClass>
 	
 	<rotatable>false</rotatable>

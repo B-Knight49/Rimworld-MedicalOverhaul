@@ -34,7 +34,7 @@
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
-    <description>An invasive life support device that forces air into the patient's lungs. To be used when pawn's breathing stat is at 0%.</description>
+    <description>An invasive life support device that forces air through a tube into the patient's lungs. To be used when one cannot breathe on their own.</description>
     <size>(1,1)</size>
     <costList>
       <Steel>250</Steel>
@@ -176,7 +176,7 @@
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
-    <description>A life support machine that skips the heart and lungs, replacing the functionality of both. An expensive version of the Mechanical Ventilator with more features and less of a mood penalty.</description>
+    <description>A life support machine that skips the heart and lungs completely, replacing the functionality of both. An expensive version of the mechanical ventilator with more features and less of a mood penalty.</description>
     <size>(1,1)</size>
     <costList>
       <Steel>300</Steel>
@@ -560,7 +560,7 @@
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
-    <description>A dispenser of dormant antimechanites used in Glitterworld hospitals. When loaded into this device, antimechanites can be programmed to target existing mechanites in the patient's body thus removing mechanite illnesses and a luciferium addiction. Requires Antinites to function.</description>
+    <description>A dispenser of dormant antimechanites used in Glitterworld hospitals. When loaded into this device, antimechanites can be programmed to target existing mechanites in the patient's body, thus removing mechanite illnesses and luciferium addiction. Requires antinites to function.</description>
     <size>(1,1)</size>
     <costList>
       <Steel>500</Steel>
@@ -639,7 +639,7 @@
       <Mass>20</Mass>
       <Flammability>1.0</Flammability>
     </statBases>
-    <description>Chemicals delivered intravenously to help battle and suppress cancer. Possibly the most famous forms of cancer treatment.</description>
+    <description>Chemicals delivered intravenously to help battle and suppress cancer. Possibly the most famous form of cancer treatment.</description>
     <size>(1,1)</size>
     <costList>
       <Steel>250</Steel>

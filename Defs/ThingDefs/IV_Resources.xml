@@ -32,7 +32,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>CrushedStem</defName>
     <label>Crushed Bloodstem</label>
-    <description>Well crushed bloodstem leafs. Looks gooey and red.</description>
+    <description>Well-crushed bloodstem leaves. Looks gooey and red.</description>
     <graphicData>
       <texPath>Things/Item/Resource/IV_BloodstemPowder</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -155,7 +155,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>AntiCancerAgent</defName>
     <label>Anti-Cancer Agent</label>
-    <description>Extract from the "Happy Tree". Used as a fuel for Chemotherapy drips.</description>
+    <description>Extract from the "Happy Tree". Used as a fuel for chemotherapy drips.</description>
     <graphicData>
       <texPath>Things/Item/Resource/IV_ACA</texPath>
       <graphicClass>Graphic_Single</graphicClass>

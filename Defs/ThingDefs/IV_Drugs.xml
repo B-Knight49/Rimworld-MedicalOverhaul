@@ -5,7 +5,7 @@
 	<ThingDef ParentName="MakeableDrugPillBase">
 		<defName>Antidepressants</defName>
 		<label>Antidepressants</label>
-		<description>Antidepressants. Pills used to boost mood that usually come with side effects/withdrawal symptoms - however NOT addictive.</description>
+		<description>Antidepressants. Pills used to boost mood that usually come with side effects/withdrawal symptoms - however, they are NOT addictive.</description>
 		<graphicData>
 		  <texPath>Things/Item/Drugs/Antidepressants</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>
@@ -92,7 +92,7 @@
     <ThingDef ParentName="MakeableDrugPillBase">
 		<defName>Antibiotics</defName>
 		<label>Antibiotics</label>
-		<description>Pills that speed up recovery from an infection / increase the rate at which a pawn becomes immune from an infection.</description>
+		<description>Pills that speed up recovery from an infection / increase the rate at which a pawn becomes immune to an infection.</description>
 		<graphicData>
 		  <texPath>Things/Item/Drugs/Antibiotics</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>
@@ -308,7 +308,7 @@
 	<ThingDef ParentName="DrugPillBase">
 		<defName>MilkThistleExtract</defName>
 		<label>Milk Thistle Extract</label>
-		<description>Small seeds and petals extracted from a Milk Thistle flower used to help treat Cirrhosis.</description>
+		<description>Small seeds and petals extracted from a milk thistle flower used to help treat cirrhosis.</description>
 		<graphicData>
 		  <texPath>Things/Item/Drugs/MilkThistleExtract</texPath>
 		  <graphicClass>Graphic_StackCount</graphicClass>
